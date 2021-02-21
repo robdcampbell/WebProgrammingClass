@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 
-const About = () => {
+const Signup = () => {
   return (
     <>
       <Nav />
       <section className="content__wrapper__main">
         <div className="content__mainSection">
-          <h2>About Page.</h2>
+          <h2>Signup Page.</h2>
         </div>
       </section>
       <Footer />
@@ -17,4 +17,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Signup;

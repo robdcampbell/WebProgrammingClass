@@ -9,12 +9,12 @@ const Nav = () => {
           <h2 className="nav__logo">HomeRoom.</h2>
         </Link>
         <div className="nav__links">
-          <a className="" href="#">
+          <Link to="/login" className="login__btn" href="#">
             Login
-          </a>
-          <a className="" href="#">
+          </Link>
+          <Link to="/signup" className="signup__btn" href="#">
             Sign Up
-          </a>
+          </Link>
           <Link to="/about">About</Link>
         </div>
       </div>

@@ -13,7 +13,7 @@ const Footer = () => {
         </a>
 
         <a href="https://robcampbelldev.com" target="_blank">
-          rob campbell
+          &#169; rob campbell 2021
         </a>
       </div>
     </footer>

@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 
 const Landing = () => {
   return (
@@ -11,7 +13,11 @@ const Landing = () => {
             tool to visualize and plan your financial future (without being dull
             and full of lingo)
           </p>
-          <p>Come find out how to start building that nest-egg </p>
+          <Link to="/" className="toHome__link">
+            <p>Find out how to start building that nest-egg</p>
+
+            <FaArrowRight className="arrow__icon" />
+          </Link>
         </div>
       </div>
     </section>
