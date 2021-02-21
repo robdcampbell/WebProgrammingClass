@@ -71,13 +71,14 @@ ul {
 }
 a {
   text-decoration: none;
+  color: var(--clr-grey-1);
 }
 h1,
 h2,
 h3,
 h4 {
   letter-spacing: var(--spacing);
-  color: var(--clr-primary-9);
+  color: var(--clr-primary-1);
   line-height: 1.25;
   margin-bottom: 0.75rem;
 }
@@ -96,10 +97,10 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-primary-9);
+  color: var(--clr-primary-1);
 }
 button {
-  color: var(--clr-primary-10);
+  color: var(--clr-primary-1);
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -139,6 +140,48 @@ button {
 
 /* 
 =============== 
+Nav
+===============
+*/
+
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 1rem;
+  border-bottom: var(--clr-grey-9) solid 1px;
+}
+.nav__container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  max-width: 1400px;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+}
+.nav__links > * {
+  margin-left: 2rem;
+}
+
+/* 
+============================== 
+Main Content
+==============================
+*/
+
+.content__mainSection {
+  padding-top: 7rem;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+=============== 
 Footer
 ===============
 */
@@ -146,13 +189,11 @@ Footer
 .footer {
   display: flex;
   justify-content: space-between;
-  width: 90vw;
+  align-items: center;
+  width: 100vw;
   max-width: var(--max-width);
-  margin: 0 auto;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  padding: 1rem 0;
-  border-top: #b1aeae solid 1px;
+  padding: 1rem;
+  border-top: var(--clr-grey-9) solid 1px;
 }
 
 .footer__left {
@@ -168,7 +209,7 @@ Footer
 
 .footer__right > a {
   text-decoration: none;
-  color: var(--clr-primary-9);
+  color: var(--clr-primary-1);
   margin-left: 1rem;
 }
 .footer__right > a:hover {

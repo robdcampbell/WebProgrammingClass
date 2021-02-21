@@ -2,13 +2,13 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="footer__left">
-        <h4>Movie Library : React.js</h4>
+        <h4>Footer(ProjectTitle).</h4>
       </div>
 
       <div className="footer__right">
-        <a href="https://github.com/robdcampbell/movieLibrary" target="_blank">
+        <a href="#" target="_blank">
           View project code.
         </a>
 
@@ -16,7 +16,7 @@ const Footer = () => {
           rob campbell
         </a>
       </div>
-    </div>
+    </footer>
   );
 };
 
