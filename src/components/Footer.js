@@ -12,7 +12,11 @@ const Footer = () => {
           View project code.
         </a>
 
-        <a href="https://robcampbelldev.com" target="_blank">
+        <a
+          className="name__copyright"
+          href="https://robcampbelldev.com"
+          target="_blank"
+        >
           &#169; rob campbell 2021
         </a>
       </div>

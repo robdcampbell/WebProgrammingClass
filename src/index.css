@@ -1,4 +1,22 @@
 /*
+============================== 
+StyleSheet Table of Contents
+==============================
+- CSS Variables
+- Global Styles
+- NavBar (Component)
+- Main Content
+- Landing Page Content
+- Public Home Page Content
+- Footer
+
+*/
+
+/*
+=============== =============== =============== 
+*/
+
+/*
 =============== 
 Variables
 ===============
@@ -33,6 +51,7 @@ Variables
   --clr-white: #fff;
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
+  --clr-red-orange: hsl(0, 100%, 67%);
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #222;
@@ -96,7 +115,6 @@ h4 {
   font-size: 0.875rem;
 }
 p {
-  /* color: var(--clr-primary-1); */
 }
 button {
   color: var(--clr-primary-1);
@@ -138,9 +156,9 @@ button {
 }
 
 /* 
-=============== 
-Nav
-===============
+============================== 
+NavBar (Component)
+==============================
 */
 
 nav {
@@ -164,13 +182,19 @@ nav {
 .login__btn {
   padding: 0.75rem 1.25rem;
   border-radius: 2rem;
-  color: var(--clr-primary-10);
+  color: var(--clr-white);
   background: linear-gradient(rgb(245, 117, 78), rgb(255, 88, 88));
+}
+.login__btn:hover {
+  color: var(--clr-grey-9);
 }
 .signup__btn {
   padding: 0.75rem 1.25rem;
-  border: rgb(245, 117, 78) solid 1px;
+  border: var(--clr-red-orange) solid 1px;
   border-radius: 2rem;
+}
+.signup__btn:hover {
+  background-color: var(--clr-white);
 }
 .nav__links > * {
   margin-left: 2rem;
@@ -207,9 +231,8 @@ Main Content
 Landing Page Content
 ==============================
 */
-
-.landing__subtitle {
-  max-width: 30rem;
+.span__title {
+  color: var(--clr-red-orange) !important;
 }
 
 .toHome__link {
@@ -220,7 +243,6 @@ Landing Page Content
   border: var(--clr-white) solid 1px;
   border-radius: 5rem;
   background: linear-gradient(90deg, rgb(252, 121, 81), rgb(252, 53, 53));
-
   color: var(--clr-grey-10);
 }
 .toHome__link:hover {
@@ -232,6 +254,34 @@ Landing Page Content
 .arrow__icon {
   margin-top: 0.25rem;
   margin-left: 0.5rem;
+  transition: 100ms ease-in-out;
+}
+.arrow__icon:hover {
+  transform: scaleX(1.1);
+  margin-top: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+.landing__subtitle {
+  max-width: 30rem;
+}
+
+/* 
+============================== 
+Public Home Page Content
+==============================
+*/
+
+.createAccount__link {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: var(--clr-white) solid 1px;
+  border-radius: 5rem;
+  background: linear-gradient(90deg, rgb(252, 121, 81), rgb(252, 53, 53));
+  color: var(--clr-grey-10);
 }
 
 /* 
@@ -277,6 +327,11 @@ Footer
   color: #c0c0c0;
   margin-left: 1rem;
 }
+
+.name__copyright {
+  color: var(--clr-grey-5) !important;
+}
+
 @media screen and (max-width: 480px) {
   .footer {
     flex-direction: column;

@@ -9,11 +9,12 @@ const Landing = () => {
         <h1>Let's take those first steps.</h1>
         <div className="landing__subtitle">
           <p>
-            HomeRoom - proving that seeing into the future is not all magic. A
-            tool to visualize and plan your financial future (without being dull
-            and full of lingo)
+            Seeing into the future is not all about magic and crystal balls.
+            <span className="span__title"> HomeRoom</span> is a tool to
+            visualize and plan your financial future (without being dull and
+            full of lingo)
           </p>
-          <Link to="/" className="toHome__link">
+          <Link to="/home-public" className="toHome__link">
             <p>Find out how to start building that nest-egg</p>
 
             <FaArrowRight className="arrow__icon" />
