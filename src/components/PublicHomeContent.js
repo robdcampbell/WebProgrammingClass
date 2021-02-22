@@ -17,6 +17,9 @@ const PublicHomePage = () => {
               But these can all be simplified to get closer to building a
               fruitful future.
             </p>
+            <p style={{ marginBottom: "0" }}>
+              <span className="emphasis__spanP">Ready to get started? :</span>
+            </p>
             <Link to="/home-public" className="createAccount__link">
               <p>Create an account, here.</p>
             </Link>
@@ -25,44 +28,53 @@ const PublicHomePage = () => {
             <span className="emphasis__spanP">Seeing is believing. </span>
             Visualize the "magic" behind it here:
           </p>
-          <h3>The miracle of compound interest</h3>
+
           <form>
             {/* CALCULATOR */}
+
             <div className="compound__interest__calc">
-              <h4>Calculate here:</h4>
+              <h3>The miracle of compound interest:</h3>
+
               <div className="initial__investment calc__input__section">
-                <input type="text" />
-                <div className="input__subtitle">
-                  <label htmlFor="">Initial Investment</label>
-                  <p>sub explanation</p>
-                </div>
+                <input
+                  type="number"
+                  placeholder="Amount put in the first time..."
+                />
+                <label htmlFor="#">Initial Investment</label>
+                {/* <p>sub explanation</p> */}
               </div>
 
               <div className="monthly__contribution calc__input__section">
+                <input type="number" placeholder="Amount added each month..." />
                 <label htmlFor="">Monthly Contribution</label>
-                <input type="text" />
-                <p>sub explanation</p>
+                {/* <p>sub explanation</p> */}
               </div>
 
               <div className="length__years calc__input__section">
+                <input
+                  type="number"
+                  placeholder="Amount it will be in this number of years..."
+                />
                 <label htmlFor="">Length of time in years</label>
-                <input type="text" />
-                <p>sub explanation</p>
+                {/* <p>sub explanation</p> */}
               </div>
 
               <div className="estimated__interest__rate calc__input__section">
+                <input type="number" placeholder="% return expected..." />
                 <label htmlFor="">Estimated Interest Rate</label>
-                <input type="text" />
-                <p>sub explanation</p>
+                {/* <p>sub explanation</p> */}
               </div>
 
               <div className="interest__rate__variance calc__input__section">
-                <label htmlFor="">Interest rate vaiance range</label>
-                <input type="text" />
-                <p>sub explanation</p>
+                <input
+                  type="number"
+                  placeholder="% the estimated interest may change per frequency (below)..."
+                />
+                <label htmlFor="">Interest rate variance range</label>
+                {/* <p>sub explanation</p> */}
               </div>
 
-              <div className="compound__frequence calc__input__section">
+              <div className="compound__frequencey calc__input__section">
                 <label htmlFor="">Compound frequency</label>
                 <select name="">
                   <option value="annually">Annually</option>
@@ -70,7 +82,7 @@ const PublicHomePage = () => {
                   <option value="monthly">Monthly</option>
                   <option value="daily">Daily</option>
                 </select>
-                <p>sub explanation</p>
+                {/* <p>sub explanation</p> */}
               </div>
 
               <div className="calc__buttons">

@@ -21,7 +21,7 @@ const Landing = () => {
             full of lingo)
           </p>
           <Link to="/home-public" className="toHome__link">
-            <p>Find out how to start building that nest-egg</p>
+            <p>Start building that nest-egg</p>
 
             <FaArrowRight className="arrow__icon" />
           </Link>
