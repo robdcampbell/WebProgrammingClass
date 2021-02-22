@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 
 const Landing = () => {
+  const [offScreenLeft, setoffScreenLeft] = useState(true);
+
+  useEffect(() => {
+    console.log("test");
+  });
+
   return (
     <section className="content__wrapper__main">
       <div className="content__mainSection">

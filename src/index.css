@@ -54,6 +54,8 @@ Variables
   --clr-red-orange: hsl(0, 100%, 67%);
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
+  --clr-green-dark2: hsl(104, 20%, 49%);
+  --clr-green-light2: hsl(75, 47%, 66%);
   --clr-black: #222;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
@@ -155,6 +157,10 @@ button {
   }
 }
 
+.emphasis__spanP {
+  font-weight: 700;
+}
+
 /* 
 ============================== 
 NavBar (Component)
@@ -162,6 +168,7 @@ NavBar (Component)
 */
 
 nav {
+  /* background-color: var(--clr-green-dark2); */
   position: fixed;
   width: 100%;
   padding: 1rem;
@@ -176,6 +183,8 @@ nav {
 }
 
 .nav__logo {
+  color: var(--clr-grey-1);
+  font-weight: 900;
   font-size: 1.5rem;
   letter-spacing: -0.1rem;
 }
@@ -266,11 +275,23 @@ Landing Page Content
   max-width: 30rem;
 }
 
+.landing__subtitle > p {
+  margin-bottom: 0.5rem;
+}
+
 /* 
 ============================== 
 Public Home Page Content
 ==============================
 */
+
+.home__heading {
+  max-width: 600px;
+}
+.home__heading > h1 {
+  border-bottom: var(--clr-primary-6) solid 1px;
+  padding-bottom: 1rem;
+}
 
 .createAccount__link {
   margin-top: 0.5rem;
@@ -285,19 +306,60 @@ Public Home Page Content
 }
 
 /* 
+============================== 
+Compound Calc. (PublicHomePage)
+==============================
+*/
+
+.calc__intro {
+  max-width: 400px;
+  margin-top: 2rem;
+}
+
+.compound__interest__calc {
+  margin-top: 1rem;
+  border: var(--clr-grey-8) solid 1px;
+  border-radius: 0.25rem;
+  padding: 2rem;
+  max-width: 600px;
+}
+
+.calc__input__section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  border-bottom: var(--clr-grey-7) solid 1px;
+}
+.calc__input__section > input {
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  background: var(--clr-white);
+  border-bottom: var(--clr-grey-4) solid 1px;
+}
+.input__subtitle {
+}
+
+/* 
 =============== 
 Footer
 ===============
 */
 
 .footer {
+  width: 100vw;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: var(--clr-grey-9) solid 1px;
+}
+.footer__container {
+  display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
-  max-width: var(--max-width);
+  max-width: 1600px;
   padding: 2rem 2rem 1rem 2rem;
-  border-top: var(--clr-grey-9) solid 1px;
 }
 
 .footer__left {
@@ -333,7 +395,7 @@ Footer
 }
 
 @media screen and (max-width: 480px) {
-  .footer {
+  .footer__container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -349,3 +411,9 @@ Footer
     margin-left: 0;
   }
 }
+
+/* 
+============================== 
+Loading Animation Classes
+==============================
+*/
