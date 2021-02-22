@@ -9,7 +9,10 @@ const Footer = () => {
         </div>
 
         <div className="footer__right">
-          <a href="#" target="_blank">
+          <a
+            href="https://github.com/robdcampbell/HomeRoom-RetirePlanning"
+            target="_blank"
+          >
             View project code.
           </a>
 

@@ -4,4 +4,4 @@
 
 ## Built using:
 
-- React.js
+- React.js (Context API, D3)

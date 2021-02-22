@@ -61,6 +61,7 @@ Variables
   /* purples used for borders/accent backgrounds */
   --clr-purple-dark: rgba(59, 55, 238, 1);
   --clr-purple-light: rgba(145, 46, 246, 1);
+  --clr-purple-lightest: rgb(171, 95, 248);
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -185,7 +186,7 @@ button {
   border-radius: 2rem;
 }
 .confirm__btn__outline:hover {
-  color: var(--clr-primary-6);
+  color: var(--clr-purple-light);
   background-color: var(--clr-white-transparent) !important;
 }
 
@@ -205,8 +206,11 @@ nav {
   );
   position: fixed;
   width: 100%;
-  padding: 1rem;
+
   border-bottom: var(--clr-grey-9) solid 1px;
+}
+.nav__wrapper {
+  padding: 1rem;
 }
 .nav__container {
   margin: 0 auto;
@@ -221,6 +225,9 @@ nav {
   font-weight: 900;
   font-size: 1.5rem;
   letter-spacing: -0.1rem;
+}
+.nav__logo:hover {
+  color: var(--clr-red-orange);
 }
 .signup__btn {
   padding: 0.75rem 1.25rem;
@@ -252,11 +259,11 @@ nav {
   border: none;
   font-size: 2rem;
 }
+.mobile__nav:hover {
+  color: var(--clr-red-orange);
+}
 @media screen and (max-width: 800px) {
   .mobile__nav {
-    /* position: absolute;
-    top: 0;
-    right: 0; */
     padding: 0 !important;
     margin: 0;
     display: flex;
@@ -265,6 +272,32 @@ nav {
     display: none;
   }
 }
+/* 
+============================== 
+SideBar Nav (Component)
+==============================
+*/
+.sidebar__container {
+  /* padding-left: 2rem; */
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: #fff;
+}
+.sidebar__container > * {
+  width: 100%;
+  color: var(--clr-white);
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+  border-top: var(--clr-purple-lightest) solid 1px;
+}
+.sidebar__container > *:hover {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* border-top: var(--clr-red-orange) solid 1px; */
+}
+
 /* 
 ============================== 
 Main Content
@@ -393,6 +426,7 @@ Compound Calc. (PublicHomePage)
   max-width: 600px;
 }
 .compound__interest__calc > h3 {
+  font-size: 1.5rem;
   letter-spacing: -0.1rem;
   padding-bottom: 1rem;
 }
@@ -412,6 +446,14 @@ Compound Calc. (PublicHomePage)
   padding: 0.5rem 0;
   background: var(--clr-white);
   border-bottom: var(--clr-grey-4) solid 1px;
+}
+.compound__frequencey > select {
+  padding: 0.25rem;
+  border: var(--clr-purple-light) solid 1px;
+}
+
+.calc__input__section > input:focus {
+  border: var(--clr-purple-light) solid 1px;
 }
 
 .calc__buttons {

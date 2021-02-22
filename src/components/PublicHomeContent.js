@@ -20,7 +20,7 @@ const PublicHomePage = () => {
             <p style={{ marginBottom: "0" }}>
               <span className="emphasis__spanP">Ready to get started? :</span>
             </p>
-            <Link to="/home-public" className="createAccount__link">
+            <Link to="/signup" className="createAccount__link">
               <p>Create an account, here.</p>
             </Link>
           </div>
@@ -36,47 +36,52 @@ const PublicHomePage = () => {
               <h3>The miracle of compound interest:</h3>
 
               <div className="initial__investment calc__input__section">
+                <label htmlFor="#">Initial Investment</label>
                 <input
                   type="number"
                   placeholder="Amount put in the first time..."
                 />
-                <label htmlFor="#">Initial Investment</label>
+
                 {/* <p>sub explanation</p> */}
               </div>
 
               <div className="monthly__contribution calc__input__section">
-                <input type="number" placeholder="Amount added each month..." />
                 <label htmlFor="">Monthly Contribution</label>
+                <input type="number" placeholder="Amount added each month..." />
+
                 {/* <p>sub explanation</p> */}
               </div>
 
               <div className="length__years calc__input__section">
+                <label htmlFor="">Length of time in years</label>
                 <input
                   type="number"
                   placeholder="Amount it will be in this number of years..."
                 />
-                <label htmlFor="">Length of time in years</label>
+
                 {/* <p>sub explanation</p> */}
               </div>
 
               <div className="estimated__interest__rate calc__input__section">
-                <input type="number" placeholder="% return expected..." />
                 <label htmlFor="">Estimated Interest Rate</label>
+                <input type="number" placeholder="% return expected..." />
+
                 {/* <p>sub explanation</p> */}
               </div>
 
               <div className="interest__rate__variance calc__input__section">
+                <label htmlFor="">Interest rate variance range</label>
                 <input
                   type="number"
-                  placeholder="% the estimated interest may change per frequency (below)..."
+                  placeholder="% the interest may change each compound..."
                 />
-                <label htmlFor="">Interest rate variance range</label>
+
                 {/* <p>sub explanation</p> */}
               </div>
 
               <div className="compound__frequencey calc__input__section">
                 <label htmlFor="">Compound frequency</label>
-                <select name="">
+                <select name="" className="compound__frequencey">
                   <option value="annually">Annually</option>
                   <option value="semiannually">Semiannually</option>
                   <option value="monthly">Monthly</option>
