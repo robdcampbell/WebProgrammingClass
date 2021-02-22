@@ -6,7 +6,7 @@ const PublicHomePage = () => {
     <section className="content__wrapper__main">
       <div className="content__mainSection">
         <div className="home__heading">
-          <h1> Let's de-mystify some things.</h1>
+          <h1> Time to de-mystify some things.</h1>
           <div className="landing__subtitle">
             <p>
               Terms like <span className="emphasis__spanP">"401k"</span>,
@@ -14,7 +14,7 @@ const PublicHomePage = () => {
               we hear tossed around can all be a bit daunting at first.
             </p>
             <p>
-              But these terms can be simplified to get closer to building
+              But these can all be simplified to get closer to building a
               fruitful future.
             </p>
             <Link to="/home-public" className="createAccount__link">
@@ -22,10 +22,10 @@ const PublicHomePage = () => {
             </Link>
           </div>
           <p className="calc__intro">
-            <span className="emphasis__spanP">Seeing is believing.</span>
+            <span className="emphasis__spanP">Seeing is believing. </span>
             Visualize the "magic" behind it here:
           </p>
-          <h3>The power of compound interest</h3>
+          <h3>The miracle of compound interest</h3>
           <form>
             {/* CALCULATOR */}
             <div className="compound__interest__calc">
@@ -74,8 +74,12 @@ const PublicHomePage = () => {
               </div>
 
               <div className="calc__buttons">
-                <button>Calculate</button>
-                <button>Reset</button>
+                <button className="confirm__btn__fill" type="button">
+                  View Results
+                </button>
+                <button className="confirm__btn__outline" type="button">
+                  Reset
+                </button>
               </div>
             </div>
           </form>

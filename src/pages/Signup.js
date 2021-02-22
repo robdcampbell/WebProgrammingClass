@@ -9,7 +9,11 @@ const Signup = () => {
       <Nav />
       <section className="content__wrapper__main">
         <div className="content__mainSection">
-          <h2>Signup Page.</h2>
+          <h2>(Creating your account is just around the bend.)</h2>
+          <p>
+            HomeRoom is still currently in it's beta stages, it's getting a
+            little closer to the finish-line everyday.
+          </p>
         </div>
       </section>
       <Footer />

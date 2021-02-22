@@ -11,7 +11,7 @@ const Landing = () => {
 
   return (
     <section className="content__wrapper__main">
-      <div className="content__mainSection">
+      <div className="content__mainSection landing__container">
         <h1>Let's take those first steps.</h1>
         <div className="landing__subtitle">
           <p>

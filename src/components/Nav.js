@@ -1,4 +1,5 @@
 import React from "react";
+import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
@@ -21,6 +22,9 @@ const Nav = () => {
 
           {/* <Link to="/about">About</Link> */}
         </div>
+        <button className="mobile__nav">
+          <FaBars />
+        </button>
       </div>
     </nav>
   );

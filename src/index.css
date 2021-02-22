@@ -58,6 +58,9 @@ Variables
   --clr-green-dark2: hsl(104, 20%, 49%);
   --clr-green-light2: hsl(75, 47%, 66%);
   --clr-black: #222;
+  /* purples used for borders/accent backgrounds */
+  --clr-purple-dark: rgba(59, 55, 238, 1);
+  --clr-purple-light: rgba(145, 46, 246, 1);
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -84,6 +87,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: var(--clr-grey-10);
+
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -121,6 +125,8 @@ p {
 }
 button {
   color: var(--clr-primary-1);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -160,6 +166,27 @@ button {
 
 .emphasis__spanP {
   font-weight: 700;
+}
+
+.confirm__btn__fill {
+  padding: 0.75rem 1.25rem;
+  border-radius: 2rem;
+  border: none;
+  color: var(--clr-white);
+  background: linear-gradient(rgb(245, 117, 78), rgb(255, 88, 88));
+}
+.confirm__btn__fill:hover {
+  color: var(--clr-grey-9);
+  background: linear-gradient(90deg, rgb(255, 145, 111), rgb(255, 88, 88));
+}
+.confirm__btn__outline {
+  padding: 0.75rem 1.25rem;
+  border: var(--clr-red-orange) solid 1px;
+  border-radius: 2rem;
+}
+.confirm__btn__outline:hover {
+  color: var(--clr-primary-6);
+  background-color: var(--clr-white-transparent) !important;
 }
 
 /* 
@@ -218,7 +245,26 @@ nav {
   color: var(--clr-white);
   margin-left: 2rem;
 }
-
+.mobile__nav {
+  display: none;
+  color: var(--clr-white);
+  background: none;
+  border: none;
+  font-size: 2rem;
+}
+@media screen and (max-width: 800px) {
+  .mobile__nav {
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+    padding: 0 !important;
+    margin: 0;
+    display: flex;
+  }
+  .nav__links > * {
+    display: none;
+  }
+}
 /* 
 ============================== 
 Main Content
@@ -250,6 +296,16 @@ Main Content
 Landing Page Content
 ==============================
 */
+.landing__container {
+  border-radius: 0.25rem;
+  padding: 2rem;
+}
+.landing__container > h1 {
+  padding-bottom: 0.5rem;
+  border-bottom: var(--clr-purple-dark) solid 1px;
+  margin-bottom: 2rem;
+}
+
 .span__title {
   color: var(--clr-red-orange) !important;
 }
@@ -286,7 +342,7 @@ Landing Page Content
 }
 
 .landing__subtitle > p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 /* 
@@ -299,7 +355,7 @@ Public Home Page Content
   max-width: 600px;
 }
 .home__heading > h1 {
-  border-bottom: var(--clr-primary-6) solid 1px;
+  border-bottom: var(--clr-purple-dark) solid 1px;
   padding-bottom: 1rem;
 }
 
@@ -328,7 +384,7 @@ Compound Calc. (PublicHomePage)
 
 .compound__interest__calc {
   margin-top: 1rem;
-  border: var(--clr-grey-8) solid 1px;
+  border: var(--clr-purple-dark) solid 1px;
   border-radius: 0.25rem;
   padding: 2rem;
   max-width: 600px;
@@ -349,6 +405,21 @@ Compound Calc. (PublicHomePage)
 }
 .input__subtitle {
 }
+
+.calc__buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+/* .calc__buttons > button {
+  border: var(--clr-red-orange) solid 1px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 5rem;
+  justify-content: flex-end;
+}
+.calc__buttons > button:hover {
+  color: var(--clr-grey-9);
+  background: linear-gradient(90deg, rgb(255, 145, 111), rgb(255, 88, 88));
+} */
 
 /* 
 =============== 
