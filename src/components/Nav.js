@@ -9,7 +9,7 @@ const Nav = () => {
           <h2 className="nav__logo">HomeRoom.</h2>
         </Link>
         <div className="nav__links">
-          <Link to="/home-public" className="signup__btn">
+          <Link to="/home-public" className="login__btn">
             Get Started
           </Link>
           <Link to="/login" className="login__btn">

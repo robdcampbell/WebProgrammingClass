@@ -49,6 +49,7 @@ Variables
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
+  --clr-white-transparent: rgba(255, 255, 255, 0.4);
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-red-orange: hsl(0, 100%, 67%);
@@ -169,6 +170,12 @@ NavBar (Component)
 
 nav {
   /* background-color: var(--clr-green-dark2); */
+  background: rgb(59, 55, 238);
+  background: linear-gradient(
+    90deg,
+    rgba(59, 55, 238, 1) 0%,
+    rgba(145, 46, 246, 1) 100%
+  );
   position: fixed;
   width: 100%;
   padding: 1rem;
@@ -183,29 +190,32 @@ nav {
 }
 
 .nav__logo {
-  color: var(--clr-grey-1);
+  color: var(--clr-white);
   font-weight: 900;
   font-size: 1.5rem;
   letter-spacing: -0.1rem;
 }
-.login__btn {
+.signup__btn {
   padding: 0.75rem 1.25rem;
   border-radius: 2rem;
   color: var(--clr-white);
   background: linear-gradient(rgb(245, 117, 78), rgb(255, 88, 88));
 }
-.login__btn:hover {
+.signup__btn:hover {
   color: var(--clr-grey-9);
+  background: linear-gradient(90deg, rgb(255, 145, 111), rgb(255, 88, 88));
 }
-.signup__btn {
+.login__btn {
   padding: 0.75rem 1.25rem;
   border: var(--clr-red-orange) solid 1px;
   border-radius: 2rem;
 }
-.signup__btn:hover {
-  background-color: var(--clr-white);
+.login__btn:hover {
+  color: var(--clr-primary-9);
+  background-color: var(--clr-white-transparent);
 }
 .nav__links > * {
+  color: var(--clr-white);
   margin-left: 2rem;
 }
 
