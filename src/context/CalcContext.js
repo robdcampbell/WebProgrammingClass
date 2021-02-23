@@ -10,12 +10,12 @@ export const useCompoundCalculator = () => {
 };
 
 export const CalcProvider = ({ children }) => {
-  const [initialInvestment, setInitialInvestment] = useState();
-  const [monthlyContribution, setMonthlyContribution] = useState();
-  const [lengthInYears, setLengthInYears] = useState();
-  const [interestRate, setInterestRate] = useState();
-  const [interestVariance, setInterestVariance] = useState();
-  const [compoundFrequency, setCompoundFrequency] = useState();
+  const [initialInvestment, setInitialInvestment] = useState("");
+  const [monthlyContribution, setMonthlyContribution] = useState("");
+  const [lengthInYears, setLengthInYears] = useState("");
+  const [interestRate, setInterestRate] = useState("");
+  const [interestVariance, setInterestVariance] = useState("");
+  const [compoundFrequency, setCompoundFrequency] = useState("");
 
   /*Values to be accessed by children components*/
   const value = {
