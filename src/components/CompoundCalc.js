@@ -18,7 +18,27 @@ const CompoundCalc = () => {
   } = useCompoundCalculator();
 
   const calculateResult = (e) => {
-    console.log(`${initialInvestment} you dope!`);
+    // r = rate ; n = Compound(Annually, monthly, etc)
+    // Amount = Principal(1+r/n)^(n*t)
+    // ex:
+    const principal = 0;
+    const rate = 0;
+    const compound = 0;
+    const time = 0;
+
+    console.log(`Principal: ${initialInvestment} `);
+    console.log(`Rate: ${interestRate}`);
+    console.log(`Length: ${lengthInYears} `);
+
+    const amount = typeof (
+      initialInvestment *
+      (1 + (interestRate / 100 / 1) ** lengthInYears)
+    );
+
+    resetCalc();
+  };
+
+  const resetCalc = () => {
     setInitialInvestment("");
     setMonthlyContribution("");
     setLengthInYears("");
@@ -125,7 +145,11 @@ const CompoundCalc = () => {
           >
             View Results
           </button>
-          <button className="confirm__btn__outline" type="button">
+          <button
+            className="confirm__btn__outline"
+            type="button"
+            onClick={(e) => resetCalc()}
+          >
             Reset
           </button>
         </div>
