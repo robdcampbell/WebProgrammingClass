@@ -1,9 +1,32 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import { useSidebarHidden } from "../context/NavContext";
+import { useCompoundCalculator } from "../context/CalcContext";
 
 const PublicHomePage = () => {
+  const { showSideBarNav, setShowSideBarNav } = useSidebarHidden();
+  const {
+    initialInvestment,
+    setInitialInvestment,
+    monthlyContribution,
+    setMonthlyContribution,
+    lengthInYears,
+    setLengthInYears,
+    interestRate,
+    setInterestRate,
+    interestVariance,
+    setInterestVariance,
+    compoundFrequency,
+    setCompoundFrequency,
+  } = useCompoundCalculator();
+
   return (
-    <section className="content__wrapper__main">
+    <section
+      className="content__wrapper__main"
+      onClick={(e) => {
+        setShowSideBarNav(false);
+      }}
+    >
       <div className="content__mainSection">
         <div className="home__heading">
           <h1> Time to de-mystify some things.</h1>
@@ -15,7 +38,7 @@ const PublicHomePage = () => {
             </p>
             <p>
               But these can all be simplified to get closer to building a
-              fruitful future.
+              fruitful future - it's never too late (or too early).
             </p>
             <p style={{ marginBottom: "0" }}>
               <span className="emphasis__spanP">Ready to get started? :</span>

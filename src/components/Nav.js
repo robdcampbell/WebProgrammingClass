@@ -1,10 +1,18 @@
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useSidebarHidden } from "../context/NavContext";
 import SideBarNav from "./SideBarNav";
 
 const Nav = () => {
-  const [showSideBarNav, setshowSideBarNav] = useState(false);
+  const { showSideBarNav, setShowSideBarNav } = useSidebarHidden();
+
+  const hideNav = () => {
+    showSideBarNav === true
+      ? console.log("PTERODACTYLLLLLL CAW CAWWWWW")
+      : console.log("nuts");
+    // : setShowSideBarNav(false);
+  };
 
   return (
     <nav>
@@ -27,7 +35,7 @@ const Nav = () => {
             {/* <Link to="/about">About</Link> */}
           </div>
           <button className="mobile__nav">
-            <FaBars onClick={(e) => setshowSideBarNav(!showSideBarNav)} />
+            <FaBars onClick={(e) => setShowSideBarNav(!showSideBarNav)} />
           </button>
         </div>
       </div>

@@ -9,18 +9,24 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import { NavProvider } from "./context/NavContext";
+import { CalcProvider } from "./context/CalcContext";
 
 function App() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={LandingPage} />
-        <Route exact path="/home-public" component={PublicHomePage} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/signup" component={Signup} />
-        <Route path="*" component={Error} />
-      </Switch>
+      <NavProvider>
+        <CalcProvider>
+          <Switch>
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/home-public" component={PublicHomePage} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Signup} />
+            <Route path="*" component={Error} />
+          </Switch>
+        </CalcProvider>
+      </NavProvider>
     </BrowserRouter>
   );
 }

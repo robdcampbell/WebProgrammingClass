@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+import { useSidebarHidden } from "../context/NavContext";
 
 const Landing = () => {
   const [offScreenLeft, setoffScreenLeft] = useState(true);
+  const { showSideBarNav, setShowSideBarNav } = useSidebarHidden();
 
-  useEffect(() => {
-    console.log("test");
-  });
+  useEffect(() => {});
 
   return (
-    <section className="content__wrapper__main">
+    <section
+      className="content__wrapper__main"
+      onClick={(e) => {
+        setShowSideBarNav(false);
+      }}
+    >
       <div className="content__mainSection landing__container">
         <h1>Let's take those first steps.</h1>
         <div className="landing__subtitle">
