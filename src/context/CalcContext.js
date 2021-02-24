@@ -16,6 +16,7 @@ const initialCalcResult = {
   interestRate: 0,
   interestVariance: 0,
   compoundFrequency: 0,
+  finalAmount: 0,
 };
 
 export const CalcProvider = ({ children }) => {

@@ -65,9 +65,9 @@ const PublicHomePage = () => {
           <CompoundCalc />
           {showResults && (
             <div className="calc__results">
-              <h3>Your Results: </h3>
-              <p>{`Principal: ${calcResults.initialInvestment}`}</p>
-              <p>{`After ${calcResults.lengthInYears} years:`}</p>
+              <h3>Compounding Results: </h3>
+              <p>{`Principal Amount: $ ${calcResults.initialInvestment}`}</p>
+              <p>{`Amount after ${calcResults.lengthInYears} years: $ ${calcResults.finalAmount}`}</p>
             </div>
           )}
         </div>

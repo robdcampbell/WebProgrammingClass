@@ -25,18 +25,9 @@ const CompoundCalc = () => {
     // A = p(1+(r/n))^(nt)
 
     // r = rate ; n = Compound(Annually, monthly, etc)
-    // Amount = Principal(1+r/n)^(n*t)
-    // ex:
-
-    const principal = 0;
-    const rate = 0;
-    const compound = 0;
-    const time = 0;
-
-    const amount = typeof (
-      initialInvestment *
-      (1 + (interestRate / 100 / 1) ** lengthInYears)
-    );
+    const finalAmount = (
+      initialInvestment * Math.pow(1 + interestRate / 100, lengthInYears)
+    ).toFixed(2);
 
     setCalcResults({
       initialInvestment,
@@ -45,6 +36,7 @@ const CompoundCalc = () => {
       interestRate,
       interestVariance,
       compoundFrequency,
+      finalAmount,
     });
 
     setShowResults(true);

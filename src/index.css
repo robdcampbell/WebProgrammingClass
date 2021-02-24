@@ -416,13 +416,7 @@ Public Home Page Content
   display: grid;
   gap: 3rem;
   grid-template-columns: 1fr 1fr;
-}
-@media screen and (max-width: 1050px) {
-  .public__home__body {
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: 1fr;
-  }
+  align-items: flex-start;
 }
 
 .home__heading {
@@ -445,6 +439,16 @@ Public Home Page Content
   border-radius: 5rem;
   background: linear-gradient(90deg, rgb(252, 121, 81), rgb(252, 53, 53));
   color: var(--clr-grey-10);
+}
+@media screen and (max-width: 1050px) {
+  .public__home__body {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr;
+  }
+  .home__heading {
+    padding-top: -5rem;
+  }
 }
 
 /* 
@@ -499,6 +503,18 @@ Compound Calc. (PublicHomePage)
 .calc__buttons {
   display: flex;
   justify-content: flex-end;
+}
+
+.calc__results {
+  padding: 2rem;
+  border: var(--clr-red-orange) solid 1px;
+  border-radius: 0.5rem;
+}
+
+.calc__results > h3 {
+  padding-bottom: 0.5rem;
+  letter-spacing: -0.125rem;
+  border-bottom: var(--clr-grey-2) solid 1px;
 }
 
 /* 
