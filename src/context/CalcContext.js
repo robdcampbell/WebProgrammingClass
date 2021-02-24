@@ -20,12 +20,14 @@ const initialCalcResult = {
 };
 
 export const CalcProvider = ({ children }) => {
-  const [initialInvestment, setInitialInvestment] = useState(0);
-  const [monthlyContribution, setMonthlyContribution] = useState(0);
-  const [lengthInYears, setLengthInYears] = useState(0);
-  const [interestRate, setInterestRate] = useState(0);
-  const [interestVariance, setInterestVariance] = useState(0);
-  const [compoundFrequency, setCompoundFrequency] = useState(0);
+  // CALC - Consolidate to calcValues ?
+  const [initialInvestment, setInitialInvestment] = useState("");
+  const [monthlyContribution, setMonthlyContribution] = useState("");
+  const [lengthInYears, setLengthInYears] = useState("");
+  const [interestRate, setInterestRate] = useState("");
+  const [interestVariance, setInterestVariance] = useState("");
+  const [compoundFrequency, setCompoundFrequency] = useState("");
+
   const [showResults, setShowResults] = useState(false);
   const [calcResults, setCalcResults] = useState(initialCalcResult);
 

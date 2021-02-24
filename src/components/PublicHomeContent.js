@@ -7,18 +7,6 @@ import CompoundCalc from "./CompoundCalc";
 const PublicHomePage = () => {
   const { showSideBarNav, setShowSideBarNav } = useSidebarHidden();
   const {
-    initialInvestment,
-    setInitialInvestment,
-    monthlyContribution,
-    setMonthlyContribution,
-    lengthInYears,
-    setLengthInYears,
-    interestRate,
-    setInterestRate,
-    interestVariance,
-    setInterestVariance,
-    compoundFrequency,
-    setCompoundFrequency,
     showResults,
     setShowResults,
     calcResults,
