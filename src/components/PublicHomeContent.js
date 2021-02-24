@@ -49,8 +49,8 @@ const PublicHomePage = () => {
               Visualize the "magic" behind it here:
             </p>
           </div>
-
-          <CompoundCalc />
+          <div>
+         <CompoundCalc />
           {showResults && (
             <div className="calc__results">
               <h3>Compounding Results: </h3>
@@ -59,6 +59,7 @@ const PublicHomePage = () => {
               <p>{`Amount after ${calcResults.lengthInYears} years: $ ${calcResults.finalAmount}`}</p>
             </div>
           )}
+          </div>
         </div>
       </div>
     </section>

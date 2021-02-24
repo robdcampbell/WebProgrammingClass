@@ -21,18 +21,21 @@ const Nav = () => {
           <Link to="/">
             <h2 className="nav__logo">HomeRoom.</h2>
           </Link>
+
           <div className="nav__links">
-            <Link to="/home-public" className="login__btn">
+            <Link to="/home-public" className="confirm__btn__outline">
               Get Started
             </Link>
-            <Link to="/login" className="login__btn">
-              Login
-            </Link>
-            <Link to="/signup" className="signup__btn">
+            <Link to="/signup" className="confirm__btn__outline">
               Sign Up
             </Link>
+            <Link to="/login" className="confirm__btn__outline">
+              Login
+            </Link>
 
-            {/* <Link to="/about">About</Link> */}
+            <Link to="/about" className="confirm__btn__outline">
+              About
+            </Link>
           </div>
           <button className="mobile__nav">
             <FaBars onClick={(e) => setShowSideBarNav(!showSideBarNav)} />

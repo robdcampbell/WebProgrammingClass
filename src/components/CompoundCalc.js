@@ -40,17 +40,24 @@ const CompoundCalc = () => {
     const totalContributions =
       initialInvestment + monthlyContribution * lengthInYears * 12;
 
-    const beforeMultiply = ((( 1 + interestRate/100/12 )**(12 * lengthInYears) -1 ) / (interestRate/100/12));
+    const beforeMultiply =
+      ((1 + interestRate / 100 / 12) ** (12 * lengthInYears) - 1) /
+      (interestRate / 100 / 12);
 
-    const monthlyContFutures = parseFloat((monthlyContribution * beforeMultiply).toFixed(2)) ;
-    
+    const monthlyContFutures = parseFloat(
+      (monthlyContribution * beforeMultiply).toFixed(2)
+    );
 
     const principalWithInterest = parseFloat(
       initialInvestment *
         Math.pow(1 + interestRate / 100, lengthInYears).toFixed(2)
     );
 
-    const finalAmount = monthlyContFutures;
+    const formatAmount = () => {};
+
+    const finalAmount = parseFloat(
+      (principalWithInterest + monthlyContFutures).toFixed(2)
+    );
 
     setCalcResults({
       initialInvestment,
@@ -77,8 +84,8 @@ const CompoundCalc = () => {
   };
 
   return (
-    <form>
-      <div className="compound__interest__calc">
+    <div className="compound__interest__calc">
+      <form>
         <h3>The miracle of compound interest:</h3>
 
         <div className="initial__investment calc__input__section">
@@ -159,7 +166,7 @@ const CompoundCalc = () => {
 
         <div className="calc__buttons">
           <button
-            className="confirm__btn__fill"
+            className="confirm__btn__outline"
             type="button"
             onClick={(e) => calculateResult()}
           >
@@ -173,8 +180,8 @@ const CompoundCalc = () => {
             Reset
           </button>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 };
 

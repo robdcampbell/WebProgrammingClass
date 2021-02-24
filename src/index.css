@@ -13,6 +13,7 @@ StyleSheet Table of Contents
 - Public Home Page Content
 - Compound Calc. (PublicHomePage)
 - Account Modals - temp.
+- About Page
 - Footer
 - Loading Animation Classes (COMING SOON)
 
@@ -56,8 +57,8 @@ CSS Variables
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-red-orange: hsl(0, 100%, 67%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-green-dark: hsl(125, 59%, 36%);
+  --clr-green-light: hsl(125, 45%, 59%);
   --clr-green-dark2: hsl(104, 20%, 49%);
   --clr-green-light2: hsl(75, 47%, 66%);
   --clr-black: #222;
@@ -177,19 +178,19 @@ button {
   border-radius: 2rem;
   border: none;
   color: var(--clr-white);
-  background: linear-gradient(rgb(245, 117, 78), rgb(255, 88, 88));
 }
 .confirm__btn__fill:hover {
-  color: var(--clr-grey-9);
-  background: linear-gradient(90deg, rgb(255, 145, 111), rgb(255, 88, 88));
+  color: var(--clr-white);
+  background-color: var(--clr-white-transparent) !important;
 }
 .confirm__btn__outline {
   padding: 0.75rem 1.25rem;
-  border: var(--clr-red-orange) solid 1px;
+  color: var(--clr-white);
+  border: var(--clr-green-dark) solid 1.5px;
   border-radius: 2rem;
 }
 .confirm__btn__outline:hover {
-  color: var(--clr-purple-light);
+  color: var(--clr-grey-6);
   background-color: var(--clr-white-transparent) !important;
 }
 
@@ -203,8 +204,8 @@ nav {
   background: rgb(59, 55, 238);
   background: linear-gradient(
     90deg,
-    rgba(59, 55, 238, 1) 0%,
-    rgba(145, 46, 246, 1) 100%
+    hsl(125, 59%, 36%) 0%,
+    hsl(125, 45%, 59%) 100%
   );
   position: fixed;
   width: 100%;
@@ -229,17 +230,15 @@ nav {
   letter-spacing: -0.1rem;
 }
 .nav__logo:hover {
-  color: var(--clr-red-orange);
+  color: var(--clr-grey-9);
 }
 .signup__btn {
   padding: 0.75rem 1.25rem;
   border-radius: 2rem;
   color: var(--clr-white);
-  background: linear-gradient(rgb(245, 117, 78), rgb(255, 88, 88));
 }
 .signup__btn:hover {
   color: var(--clr-grey-9);
-  background: linear-gradient(90deg, rgb(255, 145, 111), rgb(255, 88, 88));
 }
 .login__btn {
   padding: 0.75rem 1.25rem;
@@ -262,7 +261,7 @@ nav {
   font-size: 2rem;
 }
 .mobile__nav:hover {
-  color: var(--clr-red-orange);
+  color: var(--clr-green-dark);
 }
 @media screen and (max-width: 800px) {
   .mobile__nav {
@@ -292,7 +291,7 @@ SideBar Nav (Component)
   color: var(--clr-white);
   padding: 1rem;
   margin-bottom: 0.25rem;
-  border-top: var(--clr-purple-lightest) solid 1px;
+  border-top: var(--clr-green-light2) solid 1px;
 }
 .sidebar__container > *:hover {
   width: 100%;
@@ -362,28 +361,36 @@ Landing Page Content
   color: var(--clr-grey-6);
   letter-spacing: -0.15rem;
   padding-bottom: 0.5rem;
-  border-bottom: var(--clr-purple-dark) solid 1px;
+  border-bottom: var(--clr-green-dark) solid 1px;
   margin-bottom: 1rem;
 }
 
 .span__title {
-  color: var(--clr-red-orange) !important;
+  color: var(--clr-green-dark) !important;
 }
 
 .toHome__link {
   margin-top: 0.5rem;
   justify-content: center;
   display: flex;
+  color: var(--clr-white);
   align-items: center;
   padding: 0.5rem 1rem;
   border: var(--clr-white) solid 1px;
   border-radius: 5rem;
-  background: linear-gradient(90deg, rgb(252, 121, 81), rgb(252, 53, 53));
-  color: var(--clr-grey-10);
+  background: linear-gradient(
+    90deg,
+    hsl(125, 30%, 52%) 0%,
+    hsl(125, 45%, 59%) 100%
+  );
 }
 .toHome__link:hover {
-  background: linear-gradient(90deg, rgb(255, 145, 111), rgb(255, 88, 88));
-  color: var(--clr-white);
+  background: linear-gradient(
+    90deg,
+    hsl(125, 29%, 61%) 0%,
+    hsl(125, 67%, 76%) 100%
+  );
+  color: var(--clr-green-dark);
   cursor: pointer;
 }
 
@@ -405,7 +412,18 @@ Landing Page Content
 .landing__subtitle > p {
   margin-bottom: 2rem;
 }
-
+@media screen and (max-width: 800px) {
+  .landing__container {
+    padding: 0;
+    max-width: 400px;
+  }
+  .landing__container > h1 {
+    font-size: 5rem;
+  }
+  .landing__container > h2 {
+    font-size: 2rem;
+  }
+}
 /* 
 ============================== 
 Public Home Page Content
@@ -425,20 +443,27 @@ Public Home Page Content
 }
 .home__heading > h1 {
   letter-spacing: -0.125rem;
-  border-bottom: var(--clr-purple-dark) solid 1px;
+  border-bottom: var(--clr-green-dark) solid 1px;
   padding-bottom: 1rem;
 }
 
 .createAccount__link {
   margin-top: 0.5rem;
   display: flex;
+  color: var(--clr-white);
   justify-content: center;
   align-items: center;
   padding: 0.5rem 1rem;
   border: var(--clr-white) solid 1px;
   border-radius: 5rem;
-  background: linear-gradient(90deg, rgb(252, 121, 81), rgb(252, 53, 53));
-  color: var(--clr-grey-10);
+  background: linear-gradient(
+    90deg,
+    hsl(125, 30%, 52%) 0%,
+    hsl(125, 45%, 59%) 100%
+  );
+}
+.createAccount__link:hover {
+  color: var(--clr-grey-9);
 }
 @media screen and (max-width: 1050px) {
   .public__home__body {
@@ -464,10 +489,11 @@ Compound Calc. (PublicHomePage)
 
 .compound__interest__calc {
   margin-top: 1rem;
-  border: var(--clr-purple-dark) solid 1px;
+  border: var(--clr-green-dark) solid 1px;
   border-radius: 0.5rem;
   padding: 2rem;
   max-width: 600px;
+  margin-bottom: 0.5rem;
 }
 .compound__interest__calc > h3 {
   font-size: 1.5rem;
@@ -493,21 +519,38 @@ Compound Calc. (PublicHomePage)
 }
 .compound__frequencey > select {
   padding: 0.25rem;
-  border: var(--clr-purple-light) solid 1px;
+  border: var(--clr-green-light) solid 1px;
 }
 
 .calc__input__section > input:focus {
-  border: var(--clr-purple-light) solid 1px;
+  border: var(--clr-green-dark) solid 1px;
 }
 
 .calc__buttons {
   display: flex;
   justify-content: flex-end;
 }
+.calc__buttons > button {
+  color: var(--clr-grey-6);
+  display: flex;
+  justify-content: flex-end;
+}
+.calc__buttons > button:nth-child(1) {
+  background: linear-gradient(
+    90deg,
+    hsl(125, 30%, 52%) 0%,
+    hsl(125, 45%, 59%) 100%
+  );
+  color: var(--clr-white);
+}
+.calc__buttons > button:nth-child(1):hover {
+  background: var(--clr-white);
+  color: var(--clr-green-dark);
+}
 
 .calc__results {
   padding: 2rem;
-  border: var(--clr-red-orange) solid 1px;
+  border: var(--clr-green-dark) solid 1px;
   border-radius: 0.5rem;
 }
 
@@ -524,28 +567,53 @@ Account Modals - temp.
 */
 
 .account__modal {
-  background: linear-gradient(rgb(245, 117, 78), rgb(255, 88, 88));
   padding: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 500px;
-  border: var(--clr-red-orange) solid 1px;
+  border: var(--clr-green-dark) solid 1px;
   border-radius: 0.5rem;
 }
 
 .account__modal > h2 {
-  color: var(--clr-grey-10);
-  border-bottom: var(--clr-purple-dark) solid 1px;
+  border-bottom: var(--clr-green-dark) solid 1px;
   padding-bottom: 1rem;
 }
 
 @media screen and (max-width: 600px) {
   .account__modal {
-    max-width: 300px;
+    max-width: 400px;
   }
 }
 
+/* 
+============================== 
+About Page
+==============================
+*/
+.about__modal {
+  border: var(--clr-green-dark) solid 1px;
+  border-radius: 0.5rem;
+  max-width: 600px;
+}
+.about__modal > h2 {
+  font-size: 4rem;
+  padding-bottom: 0.5rem;
+  border-bottom: var(--clr-green-dark2) solid 1px;
+}
+.about__modal > p {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .about__modal {
+    max-width: 400px;
+  }
+  .about__modal > h2 {
+    font-size: 2.5rem;
+  }
+}
 /* 
 =============== 
 Footer
@@ -575,12 +643,12 @@ Footer
   text-decoration: none;
 }
 .footer__left > *:hover {
-  color: var(--clr-red-orange);
+  color: var(--clr-grey-5);
 }
 .footer__logo {
   letter-spacing: -0.1rem;
   padding: 0.75rem 1.25rem;
-  border: rgb(245, 117, 78) solid 1px;
+  border: var(--clr-green-light) solid 1px;
   border-radius: 2rem;
   margin-right: 2rem;
 }
