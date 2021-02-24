@@ -75,11 +75,11 @@ const CompoundCalc = () => {
   };
 
   const resetCalc = () => {
-    setInitialInvestment("");
-    setMonthlyContribution("");
-    setLengthInYears("");
-    setInterestRate("");
-    setInterestVariance("");
+    setInitialInvestment(0);
+    setMonthlyContribution(0);
+    setLengthInYears(0);
+    setInterestRate(0);
+    setInterestVariance(0);
     setCompoundFrequency("Annually");
   };
 

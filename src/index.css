@@ -177,15 +177,15 @@ button {
   padding: 0.75rem 1.25rem;
   border-radius: 2rem;
   border: none;
-  color: var(--clr-white);
+  color: var(--clr-grey-1);
 }
 .confirm__btn__fill:hover {
-  color: var(--clr-white);
+  color: var(--clr-grey-1);
   background-color: var(--clr-white-transparent) !important;
 }
 .confirm__btn__outline {
   padding: 0.75rem 1.25rem;
-  color: var(--clr-white);
+  color: var(--clr-grey-1);
   border: var(--clr-green-dark) solid 1.5px;
   border-radius: 2rem;
 }
@@ -201,12 +201,13 @@ NavBar (Component)
 */
 
 nav {
-  background: rgb(59, 55, 238);
-  background: linear-gradient(
+  /* background: rgb(59, 55, 238); */
+  /* background: linear-gradient(
     90deg,
     hsl(125, 59%, 36%) 0%,
     hsl(125, 45%, 59%) 100%
-  );
+  ); */
+  background: rgb(250, 250, 250);
   position: fixed;
   width: 100%;
 
@@ -224,7 +225,7 @@ nav {
 }
 
 .nav__logo {
-  color: var(--clr-white);
+  color: var(--clr-grey-1);
   font-weight: 900;
   font-size: 1.5rem;
   letter-spacing: -0.1rem;
@@ -232,30 +233,13 @@ nav {
 .nav__logo:hover {
   color: var(--clr-grey-9);
 }
-.signup__btn {
-  padding: 0.75rem 1.25rem;
-  border-radius: 2rem;
-  color: var(--clr-white);
-}
-.signup__btn:hover {
-  color: var(--clr-grey-9);
-}
-.login__btn {
-  padding: 0.75rem 1.25rem;
-  border: var(--clr-red-orange) solid 1px;
-  border-radius: 2rem;
-}
-.login__btn:hover {
-  color: var(--clr-primary-9);
-  background-color: var(--clr-white-transparent);
-}
+
 .nav__links > * {
-  color: var(--clr-white);
   margin-left: 2rem;
 }
 .mobile__nav {
   display: none;
-  color: var(--clr-white);
+  color: var(--clr-grey-1);
   background: none;
   border: none;
   font-size: 2rem;
@@ -288,14 +272,14 @@ SideBar Nav (Component)
 }
 .sidebar__container > * {
   width: 100%;
-  color: var(--clr-white);
+  color: var(--clr-grey-1);
   padding: 1rem;
   margin-bottom: 0.25rem;
   border-top: var(--clr-green-light2) solid 1px;
 }
 .sidebar__container > *:hover {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(230, 230, 230, 0.9);
   /* border-top: var(--clr-red-orange) solid 1px; */
 }
 
