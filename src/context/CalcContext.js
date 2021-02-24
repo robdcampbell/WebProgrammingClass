@@ -9,13 +9,24 @@ export const useCompoundCalculator = () => {
   return useContext(CalcContext);
 };
 
+const initialCalcResult = {
+  initialInvestment: 0,
+  monthlyContribution: 0,
+  lengthInYears: 0,
+  interestRate: 0,
+  interestVariance: 0,
+  compoundFrequency: 0,
+};
+
 export const CalcProvider = ({ children }) => {
-  const [initialInvestment, setInitialInvestment] = useState("");
-  const [monthlyContribution, setMonthlyContribution] = useState("");
-  const [lengthInYears, setLengthInYears] = useState("");
-  const [interestRate, setInterestRate] = useState("");
-  const [interestVariance, setInterestVariance] = useState("");
-  const [compoundFrequency, setCompoundFrequency] = useState("");
+  const [initialInvestment, setInitialInvestment] = useState(0);
+  const [monthlyContribution, setMonthlyContribution] = useState(0);
+  const [lengthInYears, setLengthInYears] = useState(0);
+  const [interestRate, setInterestRate] = useState(0);
+  const [interestVariance, setInterestVariance] = useState(0);
+  const [compoundFrequency, setCompoundFrequency] = useState(0);
+  const [showResults, setShowResults] = useState(false);
+  const [calcResults, setCalcResults] = useState(initialCalcResult);
 
   /*Values to be accessed by children components*/
   const value = {
@@ -31,6 +42,10 @@ export const CalcProvider = ({ children }) => {
     setInterestVariance,
     compoundFrequency,
     setCompoundFrequency,
+    showResults,
+    setShowResults,
+    calcResults,
+    setCalcResults,
   };
 
   return (

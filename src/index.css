@@ -315,7 +315,7 @@ Main Content
 }
 
 .content__mainSection {
-  max-width: 800px;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -326,7 +326,6 @@ Main Content
 }
 
 .content__mainSection > h2 {
-  color: var(--clr-grey-10);
   font-weight: 900;
   font-size: 3rem;
   letter-spacing: -0.1rem;
@@ -349,14 +348,22 @@ Landing Page Content
 ==============================
 */
 .landing__container {
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 2rem;
 }
 .landing__container > h1 {
+  margin-left: -0.3rem;
+  padding: 0;
+  font-size: 8rem;
+  font-weight: 800;
+  letter-spacing: -0.35rem;
+}
+.landing__container > h2 {
+  color: var(--clr-grey-6);
   letter-spacing: -0.15rem;
   padding-bottom: 0.5rem;
   border-bottom: var(--clr-purple-dark) solid 1px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .span__title {
@@ -405,6 +412,19 @@ Public Home Page Content
 ==============================
 */
 
+.public__home__body {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+}
+@media screen and (max-width: 1050px) {
+  .public__home__body {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr;
+  }
+}
+
 .home__heading {
   margin-top: 3rem;
   max-width: 600px;
@@ -441,7 +461,7 @@ Compound Calc. (PublicHomePage)
 .compound__interest__calc {
   margin-top: 1rem;
   border: var(--clr-purple-dark) solid 1px;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 2rem;
   max-width: 600px;
 }
@@ -499,6 +519,7 @@ Account Modals - temp.
 }
 
 .account__modal > h2 {
+  color: var(--clr-grey-10);
   border-bottom: var(--clr-purple-dark) solid 1px;
   padding-bottom: 1rem;
 }

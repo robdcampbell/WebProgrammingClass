@@ -15,27 +15,40 @@ const CompoundCalc = () => {
     setInterestVariance,
     compoundFrequency,
     setCompoundFrequency,
+    showResults,
+    setShowResults,
+    setCalcResults,
+    calcResults,
   } = useCompoundCalculator();
 
   const calculateResult = (e) => {
+    // A = p(1+(r/n))^(nt)
+
     // r = rate ; n = Compound(Annually, monthly, etc)
     // Amount = Principal(1+r/n)^(n*t)
     // ex:
+
     const principal = 0;
     const rate = 0;
     const compound = 0;
     const time = 0;
-
-    console.log(`Principal: ${initialInvestment} `);
-    console.log(`Rate: ${interestRate}`);
-    console.log(`Length: ${lengthInYears} `);
 
     const amount = typeof (
       initialInvestment *
       (1 + (interestRate / 100 / 1) ** lengthInYears)
     );
 
-    resetCalc();
+    setCalcResults({
+      initialInvestment,
+      monthlyContribution,
+      lengthInYears,
+      interestRate,
+      interestVariance,
+      compoundFrequency,
+    });
+
+    setShowResults(true);
+    // resetCalc();
   };
 
   const resetCalc = () => {
@@ -61,8 +74,6 @@ const CompoundCalc = () => {
             placeholder="Amount put in the first time..."
             onChange={(e) => setInitialInvestment(e.target.value)}
           />
-
-          {/* <p>sub explanation</p> */}
         </div>
 
         <div className="monthly__contribution calc__input__section">
@@ -74,8 +85,6 @@ const CompoundCalc = () => {
             value={monthlyContribution}
             onChange={(e) => setMonthlyContribution(e.target.value)}
           />
-
-          {/* <p>sub explanation</p> */}
         </div>
 
         <div className="length__years calc__input__section">
@@ -87,8 +96,6 @@ const CompoundCalc = () => {
             value={lengthInYears}
             onChange={(e) => setLengthInYears(e.target.value)}
           />
-
-          {/* <p>sub explanation</p> */}
         </div>
 
         <div className="estimated__interest__rate calc__input__section">
@@ -102,11 +109,11 @@ const CompoundCalc = () => {
             value={interestRate}
             onChange={(e) => setInterestRate(e.target.value)}
           />
-
-          {/* <p>sub explanation</p> */}
         </div>
 
-        <div className="interest__rate__variance calc__input__section">
+        {/* UPDATE SOON: INTEREST RATE VARIANCE */}
+
+        {/* <div className="interest__rate__variance calc__input__section">
           <label htmlFor="interest__rate__variance">
             Interest rate variance range
           </label>
@@ -117,11 +124,11 @@ const CompoundCalc = () => {
             value={interestVariance}
             onChange={(e) => setInterestVariance(e.target.value)}
           />
+        </div> */}
 
-          {/* <p>sub explanation</p> */}
-        </div>
+        {/* UPDATE SOON: WILL ADD COMPOUND FREQUENCY */}
 
-        <div className="compound__frequencey calc__input__section">
+        {/* <div className="compound__frequencey calc__input__section">
           <label htmlFor="compound__frequencey">Compound frequency</label>
           <select
             name="compound__frequencey"
@@ -131,11 +138,8 @@ const CompoundCalc = () => {
           >
             <option value="annually">Annually</option>
             <option value="semiannually">Semiannually</option>
-            {/* <option value="monthly">Monthly</option>
-                  <option value="daily">Daily</option> */}
           </select>
-          {/* <p>sub explanation</p> */}
-        </div>
+        </div> */}
 
         <div className="calc__buttons">
           <button
