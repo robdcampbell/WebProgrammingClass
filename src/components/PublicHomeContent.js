@@ -55,6 +55,7 @@ const PublicHomePage = () => {
             <div className="calc__results">
               <h3>Compounding Results: </h3>
               <p>{`Principal Amount: $ ${calcResults.initialInvestment}`}</p>
+              <p>{`Total Contributions: $ ${calcResults.totalContributions}`}</p>
               <p>{`Amount after ${calcResults.lengthInYears} years: $ ${calcResults.finalAmount}`}</p>
             </div>
           )}

@@ -22,12 +22,35 @@ const CompoundCalc = () => {
   } = useCompoundCalculator();
 
   const calculateResult = (e) => {
-    // A = p(1+(r/n))^(nt)
+    /* PRINCIPAL W/ INTEREST:  
+        A = p(1+(r/n))^(nt)
+    */
+    /*
+    Future Value of Series
+     MONTHLY CONT. W/ INTEREST:[ PMT × (((1 + r/n)^(nt) - 1) / (r/n)) ]
+      ex: 
+      Total = 
+      [ 5000 (1 + 0.05 / 12) ^ (12 × 10) ] 
+      + 
+      [ 100 × (((1 + 0.00416)^(12 × 10) - 1) / (0.00416)) ]
+      
+      [ 500 × (((1 + 0.00416)^(12 × 10) - 1) / (0.00416)) ]
+    */
 
-    // r = rate ; n = Compound(Annually, monthly, etc)
-    const finalAmount = (
-      initialInvestment * Math.pow(1 + interestRate / 100, lengthInYears)
-    ).toFixed(2);
+    const totalContributions =
+      initialInvestment + monthlyContribution * lengthInYears * 12;
+
+    const beforeMultiply = ((( 1 + interestRate/100/12 )**(12 * lengthInYears) -1 ) / (interestRate/100/12));
+
+    const monthlyContFutures = parseFloat((monthlyContribution * beforeMultiply).toFixed(2)) ;
+    
+
+    const principalWithInterest = parseFloat(
+      initialInvestment *
+        Math.pow(1 + interestRate / 100, lengthInYears).toFixed(2)
+    );
+
+    const finalAmount = monthlyContFutures;
 
     setCalcResults({
       initialInvestment,
@@ -37,6 +60,7 @@ const CompoundCalc = () => {
       interestVariance,
       compoundFrequency,
       finalAmount,
+      totalContributions,
     });
 
     setShowResults(true);
@@ -64,7 +88,7 @@ const CompoundCalc = () => {
             type="number"
             value={initialInvestment}
             placeholder="Amount put in the first time..."
-            onChange={(e) => setInitialInvestment(e.target.value)}
+            onChange={(e) => setInitialInvestment(parseFloat(e.target.value))}
           />
         </div>
 
@@ -75,7 +99,7 @@ const CompoundCalc = () => {
             type="number"
             placeholder="Amount added each month..."
             value={monthlyContribution}
-            onChange={(e) => setMonthlyContribution(e.target.value)}
+            onChange={(e) => setMonthlyContribution(parseFloat(e.target.value))}
           />
         </div>
 
@@ -86,7 +110,7 @@ const CompoundCalc = () => {
             type="number"
             placeholder="Amount it will be in this number of years..."
             value={lengthInYears}
-            onChange={(e) => setLengthInYears(e.target.value)}
+            onChange={(e) => setLengthInYears(parseFloat(e.target.value))}
           />
         </div>
 
@@ -99,7 +123,7 @@ const CompoundCalc = () => {
             type="number"
             placeholder="% return expected..."
             value={interestRate}
-            onChange={(e) => setInterestRate(e.target.value)}
+            onChange={(e) => setInterestRate(parseFloat(e.target.value))}
           />
         </div>
 
