@@ -19,7 +19,7 @@ const Nav = () => {
       <div className="nav__wrapper">
         <div className="nav__container">
           <Link to="/">
-            <h2 className="nav__logo">HomeRoom.</h2>
+            <h2 className="nav__logo">HomeRoom</h2>
           </Link>
 
           <div className="nav__links">

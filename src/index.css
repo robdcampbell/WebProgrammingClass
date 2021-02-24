@@ -112,6 +112,7 @@ h4 {
   color: var(--clr-primary-1);
   line-height: 1.25;
   margin-bottom: 0.75rem;
+  font-weight: 400;
 }
 h1 {
   font-size: 2.5rem;
@@ -226,7 +227,7 @@ nav {
 
 .nav__logo {
   color: var(--clr-grey-1);
-  font-weight: 900;
+  font-weight: 200;
   font-size: 1.5rem;
   letter-spacing: -0.1rem;
 }
@@ -309,7 +310,6 @@ Main Content
 }
 
 .content__mainSection > h2 {
-  font-weight: 900;
   font-size: 3rem;
   letter-spacing: -0.1rem;
 }
@@ -338,11 +338,12 @@ Landing Page Content
   margin-left: -0.3rem;
   padding: 0;
   font-size: 8rem;
-  font-weight: 800;
+  font-weight: 200;
   letter-spacing: -0.35rem;
 }
 .landing__container > h2 {
   color: var(--clr-grey-6);
+  font-weight: 200;
   letter-spacing: -0.15rem;
   padding-bottom: 0.5rem;
   border-bottom: var(--clr-green-dark) solid 1px;

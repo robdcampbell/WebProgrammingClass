@@ -7,9 +7,9 @@ const Footer = () => {
       <div className="footer__container">
         <div className="footer__left">
           <Link to="/" className="footer__logo">
-            HomeRoom.
+            HomeRoom
           </Link>
-          <Link to="/about">About.</Link>
+          <Link to="/about">About</Link>
         </div>
 
         <div className="footer__right">

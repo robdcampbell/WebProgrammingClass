@@ -55,7 +55,7 @@ const CompoundCalc = () => {
 
     const formatAmount = () => {};
 
-    const finalAmount = parseFloat(
+    const finalAmount = parseInt(
       (principalWithInterest + monthlyContFutures).toFixed(2)
     );
 

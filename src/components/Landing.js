@@ -17,7 +17,7 @@ const Landing = () => {
       }}
     >
       <div className="content__mainSection landing__container">
-        <h1>HomeRoom.</h1>
+        <h1>HomeRoom</h1>
         <h2>Let's take those first steps.</h2>
         <div className="landing__subtitle">
           <p>
