@@ -13,21 +13,15 @@ const LoginModal = () => {
       <div className="account__modal">
         <div className="account__modal__body">
           <h2 className="accountModal__action">Log In</h2>
-          {/* firebase sets localStorage tokens to verify 
-          {currentUser.email} */}
-          {/* {error && <Alert variant="danger">{error}</Alert>} */}
-
           <form className="accountModal__form" onSubmit={handleSubmit}>
             <div id="email">
               <label>Email</label>
               <input type="email" required ref={emailRef} />
             </div>
-
             <div id="password">
               <label>Password</label>
               <input type="password" required ref={passwordRef} />
             </div>
-
             <div className="accountModal__footer">
               <button disabled={loading} type="submit">
                 Log In
@@ -37,7 +31,6 @@ const LoginModal = () => {
           </form>
         </div>
       </div>
-
       <div className="w-100 text-center mt-2">
         Need an account? <Link to="/signup">Sign Up</Link>
       </div>

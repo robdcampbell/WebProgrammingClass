@@ -1,7 +1,5 @@
 import React, { useContext, useState } from "react";
 
-/* CREATING CALCCONTEXT TO SAVE DATA SINGING-UP / USING THE DATA ONCE A USER IS CREATED */
-
 const CalcContext = React.createContext();
 
 // CUSTOM HOOK -  to access whatever is added to the 'value' prop.
