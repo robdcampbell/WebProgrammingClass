@@ -23,7 +23,8 @@ const PublicHomePage = () => {
       <div className="content__mainSection ">
         <div className="public__home__body">
           <div className="home__heading">
-            <h1> Time to de-mystify some things.</h1>
+            <h1> Welcome to HomeRoom,</h1>
+            <h2>let's de-mystify some things.</h2>
 
             <div className="landing__subtitle">
               <p>
@@ -50,15 +51,15 @@ const PublicHomePage = () => {
             </p>
           </div>
           <div>
-         <CompoundCalc />
-          {showResults && (
-            <div className="calc__results">
-              <h3>Compounding Results: </h3>
-              <p>{`Principal Amount: $ ${calcResults.initialInvestment}`}</p>
-              <p>{`Total Contributions: $ ${calcResults.totalContributions}`}</p>
-              <p>{`Amount after ${calcResults.lengthInYears} years: $ ${calcResults.finalAmount}`}</p>
-            </div>
-          )}
+            <CompoundCalc />
+            {showResults && (
+              <div className="calc__results">
+                <h3>Compounding Results: </h3>
+                <p>{`Principal Amount: $ ${calcResults.initialInvestment}`}</p>
+                <p>{`Total Contributions: $ ${calcResults.totalContributions}`}</p>
+                <p>{`Amount after ${calcResults.lengthInYears} years: $ ${calcResults.finalAmount}`}</p>
+              </div>
+            )}
           </div>
         </div>
       </div>

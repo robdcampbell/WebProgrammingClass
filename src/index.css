@@ -67,7 +67,7 @@ CSS Variables
   --clr-purple-light: rgba(145, 46, 246, 1);
   --clr-purple-lightest: rgb(171, 95, 248);
   --transition: all 0.3s linear;
-  --spacing: 0.1rem;
+  --spacing: -0.1rem;
   --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -108,7 +108,7 @@ h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
+  /* letter-spacing: var(--spacing); */
   color: var(--clr-primary-1);
   line-height: 1.25;
   margin-bottom: 0.75rem;
@@ -224,6 +224,10 @@ nav {
   padding-top: 1rem;
   max-width: 1400px;
 }
+.nav__icon {
+  margin-bottom: -0.2rem;
+  margin-right: 0.5rem;
+}
 
 .nav__logo {
   color: var(--clr-grey-1);
@@ -276,7 +280,7 @@ SideBar Nav (Component)
   color: var(--clr-grey-1);
   padding: 1rem;
   margin-bottom: 0.25rem;
-  border-top: var(--clr-green-light2) solid 1px;
+  border-top: var(--clr-grey-7) solid 1px;
 }
 .sidebar__container > *:hover {
   width: 100%;
@@ -291,11 +295,11 @@ Main Content
 */
 
 .content__wrapper__main {
-  min-height: 90vh;
+  min-height: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .content__mainSection {
@@ -306,7 +310,7 @@ Main Content
   padding: 2rem;
 
   /* CLEAR FIXED NAV */
-  padding-top: 7rem;
+  margin-top: 7rem;
 }
 
 .content__mainSection > h2 {
@@ -320,6 +324,14 @@ Main Content
 }
 
 @media screen and (max-width: 600px) {
+  .content__wrapper__main {
+    min-height: 700px;
+  }
+  .content__mainSection {
+    padding: 1rem;
+    margin: 1rem;
+    margin-top: 8rem;
+  }
   .content__mainSection > h2 {
     font-size: 2rem;
   }
@@ -332,7 +344,7 @@ Landing Page Content
 */
 .landing__container {
   border-radius: 0.5rem;
-  padding: 2rem;
+  /* box-shadow: 0px 10px 40px 10px #e4e4e4; */
 }
 .landing__container > h1 {
   margin-left: -0.3rem;
@@ -397,13 +409,17 @@ Landing Page Content
 .landing__subtitle > p {
   margin-bottom: 2rem;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .landing__container {
-    padding: 0;
+    /* justify-content: center;
+    align-items: center; */
+    padding: 1rem;
     max-width: 400px;
   }
   .landing__container > h1 {
-    font-size: 5rem;
+    font-size: 4rem;
+    margin: 0;
+    margin-top: 3rem;
   }
   .landing__container > h2 {
     font-size: 2rem;
@@ -426,7 +442,7 @@ Public Home Page Content
   margin-top: 3rem;
   max-width: 600px;
 }
-.home__heading > h1 {
+.home__heading > h2 {
   letter-spacing: -0.125rem;
   border-bottom: var(--clr-green-dark) solid 1px;
   padding-bottom: 1rem;
@@ -541,7 +557,6 @@ Compound Calc. (PublicHomePage)
 
 .calc__results > h3 {
   padding-bottom: 0.5rem;
-  letter-spacing: -0.125rem;
   border-bottom: var(--clr-grey-2) solid 1px;
 }
 
@@ -557,18 +572,55 @@ Account Modals - temp.
   justify-content: center;
   align-items: center;
   max-width: 500px;
-  border: var(--clr-green-dark) solid 1px;
+  border: var(--clr-grey-5) solid 1px;
   border-radius: 0.5rem;
 }
-
-.account__modal > h2 {
-  border-bottom: var(--clr-green-dark) solid 1px;
+.accountModal__action {
+  border-bottom: var(--clr-grey-5) solid 1px !important;
   padding-bottom: 1rem;
 }
 
-@media screen and (max-width: 600px) {
+.accountModal__form {
+  display: flex;
+  flex-direction: column;
+}
+.accountModal__form > * {
+  margin-top: 1rem;
+  width: 100%;
+}
+.accountModal__form > div > * {
+  /* margin-top: 1rem; */
+  width: 100%;
+}
+
+.accountModal__form > div > input {
+  border: none;
+  border-bottom: var(--clr-grey-5) solid 1px;
+}
+
+.accountModal__footer > button {
+  width: 100%;
+  background: none;
+  border: var(--clr-grey-6) solid 1px;
+  border-radius: 0.25rem;
+}
+
+.accountModal__footer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.accountModal__footer > :nth-child(2) {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
   .account__modal {
-    max-width: 400px;
+    /* margin-top: 10rem; */
+    max-width: 300px;
   }
 }
 
@@ -681,5 +733,11 @@ Footer
 /* 
 =======================================  
 Loading Animation Classes (COMING SOON)
+======================================= 
+*/
+
+/* 
+=======================================  
+MEDIA QUERIES 
 ======================================= 
 */

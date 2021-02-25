@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import LoginModal from "../components/LoginModal";
 import Nav from "../components/Nav";
 import { useSidebarHidden } from "../context/NavContext";
 
@@ -9,21 +9,15 @@ const Login = () => {
   return (
     <>
       <Nav />
+
       <section
-        className="content__wrapper__main bgc__gradient"
+        className="content__wrapper__main"
         onClick={(e) => {
           setShowSideBarNav(false);
         }}
       >
-        {/* PLACEHOLDER DIV */}
-        <div className="coming__soon">
-          <div className="content__mainSection account__modal">
-            <h2>(Login / Account Profile coming soon...)</h2>
-            <p>
-              Still currently in it's beta stages, it's getting a little closer
-              to the finish-line everyday.
-            </p>
-          </div>
+        <div className="content__mainSection landing__container">
+          <LoginModal />
         </div>
       </section>
       <Footer />

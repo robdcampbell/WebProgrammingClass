@@ -1,19 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import LoginModal from "../components/LoginModal";
 import Nav from "../components/Nav";
+import SignUpModal from "../components/SignUpModal";
+import { useSidebarHidden } from "../context/NavContext";
 
 const Signup = () => {
+  const { showSideBarNav, setShowSideBarNav } = useSidebarHidden();
   return (
     <>
       <Nav />
-      <section className="content__wrapper__main bgc__gradient">
-        <div className="content__mainSection account__modal">
-          <h2>(Creating your account is just around the bend.)</h2>
-          <p>
-            Still currently in it's beta stages, it's getting a little closer to
-            the finish-line everyday.
-          </p>
+
+      <section
+        className="content__wrapper__main"
+        onClick={(e) => {
+          setShowSideBarNav(false);
+        }}
+      >
+        <div className="content__mainSection landing__container">
+          <SignUpModal />
         </div>
       </section>
       <Footer />

@@ -71,7 +71,6 @@ const CompoundCalc = () => {
     });
 
     setShowResults(true);
-    // resetCalc();
   };
 
   const resetCalc = () => {
@@ -81,6 +80,7 @@ const CompoundCalc = () => {
     setInterestRate(0);
     setInterestVariance(0);
     setCompoundFrequency("Annually");
+    setShowResults(false);
   };
 
   return (
