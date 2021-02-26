@@ -6,9 +6,8 @@ import Nav from "../components/Nav";
 const LandingPage = () => {
   return (
     <main>
-      <Nav />
+      {/* <Nav /> */}
       <Landing />
-      <Footer />
     </main>
   );
 };

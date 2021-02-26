@@ -27,6 +27,9 @@ CSS Variables
 */
 
 :root {
+  /* Background Theme*/
+  --rc-background-light: hsl(0, 0%, 98%);
+
   /* dark shades of primary color*/
   --clr-primary-1: hsl(205, 86%, 17%);
   --clr-primary-2: hsl(205, 77%, 27%);
@@ -91,7 +94,7 @@ body {
   top: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background: rgb(250, 250, 250);
+  background: var(--rc-background-light);
 
   color: var(--clr-grey-1);
   line-height: 1.5;
@@ -179,20 +182,22 @@ button {
   border-radius: 2rem;
   border: none;
   color: var(--clr-grey-1);
+  transition: 200ms ease-in;
 }
 .confirm__btn__fill:hover {
   color: var(--clr-grey-1);
-  background-color: var(--clr-white-transparent) !important;
+  background: var(--clr-grey-9) !important;
 }
 .confirm__btn__outline {
   padding: 0.75rem 1.25rem;
   color: var(--clr-grey-1);
-  border: var(--clr-green-dark) solid 1.5px;
+  border: var(--clr-red-orange) solid 1.5px;
   border-radius: 2rem;
+  transition: 200ms ease-in;
 }
 .confirm__btn__outline:hover {
   color: var(--clr-grey-6);
-  background-color: var(--clr-white-transparent) !important;
+  background: var(--clr-grey-9) !important;
 }
 
 /* 
@@ -202,16 +207,9 @@ NavBar (Component)
 */
 
 nav {
-  /* background: rgb(59, 55, 238); */
-  /* background: linear-gradient(
-    90deg,
-    hsl(125, 59%, 36%) 0%,
-    hsl(125, 45%, 59%) 100%
-  ); */
   background: rgb(250, 250, 250);
   position: fixed;
   width: 100%;
-
   border-bottom: var(--clr-grey-9) solid 1px;
 }
 .nav__wrapper {
@@ -236,7 +234,7 @@ nav {
   letter-spacing: -0.1rem;
 }
 .nav__logo:hover {
-  color: var(--clr-grey-9);
+  color: var(--clr-grey-5);
 }
 
 .nav__links > * {
@@ -250,7 +248,7 @@ nav {
   font-size: 2rem;
 }
 .mobile__nav:hover {
-  color: var(--clr-green-dark);
+  color: var(--clr-grey-5);
 }
 @media screen and (max-width: 800px) {
   .mobile__nav {
@@ -262,13 +260,13 @@ nav {
     display: none;
   }
 }
+
 /* 
 ============================== 
 SideBar Nav (Component)
 ==============================
 */
 .sidebar__container {
-  /* padding-left: 2rem; */
   margin: 0;
   width: 100%;
   display: flex;
@@ -285,56 +283,6 @@ SideBar Nav (Component)
 .sidebar__container > *:hover {
   width: 100%;
   background-color: rgba(230, 230, 230, 0.9);
-  /* border-top: var(--clr-red-orange) solid 1px; */
-}
-
-/* 
-============================== 
-Main Content
-==============================
-*/
-
-.content__wrapper__main {
-  min-height: 1000px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.content__mainSection {
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 2rem;
-
-  /* CLEAR FIXED NAV */
-  margin-top: 7rem;
-}
-
-.content__mainSection > h2 {
-  font-size: 3rem;
-  letter-spacing: -0.1rem;
-}
-
-/* STAND-IN / WHEN UNDER CONSTRUCTION */
-.bgc__gradient {
-  /* background: linear-gradient(rgb(245, 117, 78), rgb(255, 88, 88)); */
-}
-
-@media screen and (max-width: 600px) {
-  .content__wrapper__main {
-    min-height: 700px;
-  }
-  .content__mainSection {
-    padding: 1rem;
-    margin: 1rem;
-    margin-top: 8rem;
-  }
-  .content__mainSection > h2 {
-    font-size: 2rem;
-  }
 }
 
 /* 
@@ -342,9 +290,46 @@ Main Content
 Landing Page Content
 ==============================
 */
+
+.landing__wrapper__main {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing__fixedWidth {
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing__nav__container {
+  width: 100%;
+  position: fixed;
+  max-width: 1200px;
+  margin-top: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.landing__nav__links {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.landing__nav__links > * {
+  margin-left: 1rem;
+}
+
+.landing__window {
+  margin-top: 7rem;
+}
 .landing__container {
   border-radius: 0.5rem;
-  /* box-shadow: 0px 10px 40px 10px #e4e4e4; */
 }
 .landing__container > h1 {
   margin-left: -0.3rem;
@@ -354,40 +339,31 @@ Landing Page Content
   letter-spacing: -0.35rem;
 }
 .landing__container > h2 {
-  color: var(--clr-grey-6);
+  color: var(--clr-grey-3);
   font-weight: 200;
   letter-spacing: -0.15rem;
   padding-bottom: 0.5rem;
-  border-bottom: var(--clr-green-dark) solid 1px;
+  border-bottom: var(--clr-grey-2) solid 1px;
   margin-bottom: 1rem;
 }
 
 .span__title {
-  color: var(--clr-green-dark) !important;
+  color: var(--clr-red-orange) !important;
 }
 
-.toHome__link {
+.landing__links {
   margin-top: 0.5rem;
   justify-content: center;
   display: flex;
-  color: var(--clr-white);
   align-items: center;
   padding: 0.5rem 1rem;
-  border: var(--clr-white) solid 1px;
+  border: var(--clr-grey-7) solid 1px;
   border-radius: 5rem;
-  background: linear-gradient(
-    90deg,
-    hsl(125, 30%, 52%) 0%,
-    hsl(125, 45%, 59%) 100%
-  );
+  transition: 200ms ease-in;
 }
-.toHome__link:hover {
-  background: linear-gradient(
-    90deg,
-    hsl(125, 29%, 61%) 0%,
-    hsl(125, 67%, 76%) 100%
-  );
-  color: var(--clr-green-dark);
+.landing__links:hover {
+  background: var(--clr-grey-9);
+  color: var(--clr-white);
   cursor: pointer;
 }
 
@@ -409,10 +385,61 @@ Landing Page Content
 .landing__subtitle > p {
   margin-bottom: 2rem;
 }
+
+.account__buttons {
+  width: 100%;
+  display: flex;
+}
+.landing__mobile__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  background: var(--rc-background-light);
+}
+.landing__mobile__icon {
+  display: none;
+  color: var(--clr-grey-1);
+  padding-bottom: 0.5rem;
+  border: none;
+  font-size: 2rem;
+}
+
+.mobile__sidebar__container {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: #fff;
+}
+.mobile__sidebar__container > * {
+  width: 100%;
+  color: var(--clr-grey-1);
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+  border-top: var(--clr-grey-7) solid 1px;
+}
+.mobile__sidebar__container > *:hover {
+  width: 100%;
+  background-color: rgba(230, 230, 230, 0.9);
+}
+
+@media screen and (max-width: 800px) {
+  .landing__nav__links {
+    display: none;
+  }
+  .landing__mobile__icon {
+    display: flex;
+  }
+}
+
 @media screen and (max-width: 600px) {
+  .landing__window {
+    margin-top: 0rem;
+    max-width: 350px;
+  }
   .landing__container {
-    /* justify-content: center;
-    align-items: center; */
     padding: 1rem;
     max-width: 400px;
   }
@@ -425,6 +452,52 @@ Landing Page Content
     font-size: 2rem;
   }
 }
+
+/* 
+============================== 
+Main Content - Body wireframe
+==============================
+*/
+
+.content__wrapper__main {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.content__mainSection {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+
+  /* CLEAR FIXED NAV */
+  margin-top: 7rem;
+}
+
+.content__mainSection > h2 {
+  font-size: 3rem;
+  letter-spacing: -0.1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .content__wrapper__main {
+    min-height: 700px;
+  }
+  .content__mainSection {
+    padding: 1rem;
+    margin: 1rem;
+    margin-top: 8rem;
+  }
+  .content__mainSection > h2 {
+    font-size: 2rem;
+  }
+}
+
 /* 
 ============================== 
 Public Home Page Content
@@ -444,27 +517,27 @@ Public Home Page Content
 }
 .home__heading > h2 {
   letter-spacing: -0.125rem;
-  border-bottom: var(--clr-green-dark) solid 1px;
+  border-bottom: var(--clr-grey-2) solid 1px;
   padding-bottom: 1rem;
 }
 
 .createAccount__link {
   margin-top: 0.5rem;
   display: flex;
-  color: var(--clr-white);
+  color: var(--clr-grey-1);
   justify-content: center;
   align-items: center;
   padding: 0.5rem 1rem;
-  border: var(--clr-white) solid 1px;
+  border: var(--clr-grey-2) solid 1px;
   border-radius: 5rem;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     hsl(125, 30%, 52%) 0%,
     hsl(125, 45%, 59%) 100%
-  );
+  ); */
 }
 .createAccount__link:hover {
-  color: var(--clr-grey-9);
+  color: var(--clr-grey-7);
 }
 @media screen and (max-width: 1050px) {
   .public__home__body {
@@ -490,7 +563,7 @@ Compound Calc. (PublicHomePage)
 
 .compound__interest__calc {
   margin-top: 1rem;
-  border: var(--clr-green-dark) solid 1px;
+  border: var(--clr-grey-2) solid 1px;
   border-radius: 0.5rem;
   padding: 2rem;
   max-width: 600px;
@@ -524,7 +597,7 @@ Compound Calc. (PublicHomePage)
 }
 
 .calc__input__section > input:focus {
-  border: var(--clr-green-dark) solid 1px;
+  border: var(--clr-red-orange) solid 1px;
 }
 
 .calc__buttons {
@@ -536,22 +609,15 @@ Compound Calc. (PublicHomePage)
   display: flex;
   justify-content: flex-end;
 }
-.calc__buttons > button:nth-child(1) {
-  background: linear-gradient(
-    90deg,
-    hsl(125, 30%, 52%) 0%,
-    hsl(125, 45%, 59%) 100%
-  );
-  color: var(--clr-white);
-}
+
 .calc__buttons > button:nth-child(1):hover {
   background: var(--clr-white);
-  color: var(--clr-green-dark);
+  color: var(--clr-grey-1);
 }
 
 .calc__results {
   padding: 2rem;
-  border: var(--clr-green-dark) solid 1px;
+  border: var(--clr-grey-2) solid 1px;
   border-radius: 0.5rem;
 }
 
@@ -589,7 +655,6 @@ Account Modals - temp.
   width: 100%;
 }
 .accountModal__form > div > * {
-  /* margin-top: 1rem; */
   width: 100%;
 }
 
@@ -617,9 +682,14 @@ Account Modals - temp.
   text-align: center;
 }
 
+.under__account__modal {
+  width: 100%;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
 @media screen and (max-width: 500px) {
   .account__modal {
-    /* margin-top: 10rem; */
     max-width: 300px;
   }
 }
@@ -630,14 +700,14 @@ About Page
 ==============================
 */
 .about__modal {
-  border: var(--clr-green-dark) solid 1px;
+  border: var(--clr-grey-2) solid 1px;
   border-radius: 0.5rem;
   max-width: 600px;
 }
 .about__modal > h2 {
   font-size: 4rem;
   padding-bottom: 0.5rem;
-  border-bottom: var(--clr-green-dark2) solid 1px;
+  border-bottom: var(--clr-grey-2) solid 1px;
 }
 .about__modal > p {
   margin-bottom: 1rem;
@@ -685,7 +755,7 @@ Footer
 .footer__logo {
   letter-spacing: -0.1rem;
   padding: 0.75rem 1.25rem;
-  border: var(--clr-green-light) solid 1px;
+  border: var(--clr-grey-2) solid 1px;
   border-radius: 2rem;
   margin-right: 2rem;
 }

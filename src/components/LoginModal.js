@@ -31,7 +31,7 @@ const LoginModal = () => {
           </form>
         </div>
       </div>
-      <div className="w-100 text-center mt-2">
+      <div className="under__account__modal">
         Need an account? <Link to="/signup">Sign Up</Link>
       </div>
     </>

@@ -12,7 +12,7 @@ const SignUpModal = () => {
     <>
       <div className="account__modal">
         <div className="account__modal__body">
-          <h2 className="accountModal__action">Log In</h2>
+          <h2 className="accountModal__action">Sign Up</h2>
           {/* firebase sets localStorage tokens to verify 
           {currentUser.email} */}
           {/* {error && <Alert variant="danger">{error}</Alert>} */}
@@ -38,8 +38,8 @@ const SignUpModal = () => {
         </div>
       </div>
 
-      <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/signup">Sign Up</Link>
+      <div className="under__account__modal">
+        Have an account? <Link to="/login">Login</Link>
       </div>
     </>
   );
