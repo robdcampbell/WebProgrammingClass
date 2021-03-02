@@ -64,7 +64,7 @@ const Landing = () => {
                 preparing for your financial future dead simple and easy to
                 visualize (without being dull and full of lingo).
               </p>
-              <Link to="/home-public" className="landing__links">
+              <Link to="/home-public" className="createAccount__btn">
                 <p>Start building that nest-egg</p>
                 <FaArrowRight className="arrow__icon" />
               </Link>

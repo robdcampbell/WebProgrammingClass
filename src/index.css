@@ -244,7 +244,7 @@ nav {
 }
 .mobile__nav {
   display: none;
-  color: var(--clr-grey-1);
+  color: var(--clr-white);
   background: none;
   border: none;
   font-size: 2rem;
@@ -277,7 +277,7 @@ SideBar Nav (Component)
 }
 .sidebar__container > * {
   width: 100%;
-  color: var(--clr-grey-1);
+  color: var(--clr-white);
   padding: 1rem;
   margin-bottom: 0.25rem;
   border-top: var(--clr-grey-7) solid 1px;
@@ -363,10 +363,27 @@ Landing Page Content
   border-radius: 5rem;
   transition: 200ms ease-in;
 }
+
 .landing__links:hover {
   background: var(--clr-grey-9);
   color: var(--clr-white);
   cursor: pointer;
+}
+.createAccount__btn {
+  margin-top: 0.5rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: var(--clr-grey-7) solid 1px;
+  border-radius: 5rem;
+  transition: 200ms ease-in;
+  background: linear-gradient(90deg, var(--rc-blue), #8826f7);
+  color: var(--clr-white);
+}
+.createAccount__btn:hover {
+  background: linear-gradient(90deg, var(--rc-blue), #9767ce);
+  color: var(--clr-grey-1);
 }
 
 .arrow__icon {
@@ -524,24 +541,6 @@ Public Home Page Content
   padding-bottom: 1rem;
 }
 
-.createAccount__link {
-  margin-top: 0.5rem;
-  display: flex;
-  color: var(--clr-grey-1);
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  border: var(--clr-grey-2) solid 1px;
-  border-radius: 5rem;
-  /* background: linear-gradient(
-    90deg,
-    hsl(125, 30%, 52%) 0%,
-    hsl(125, 45%, 59%) 100%
-  ); */
-}
-.createAccount__link:hover {
-  color: var(--clr-grey-7);
-}
 @media screen and (max-width: 1050px) {
   .public__home__body {
     display: grid;

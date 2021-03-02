@@ -40,7 +40,7 @@ const PublicHomePage = () => {
               <p style={{ marginBottom: "0" }}>
                 <span className="emphasis__spanP">Ready to get started? :</span>
               </p>
-              <Link to="/signup" className="createAccount__link">
+              <Link to="/signup" className="createAccount__btn">
                 <p>Create an account, here.</p>
               </Link>
             </div>
