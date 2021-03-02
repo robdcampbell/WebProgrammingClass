@@ -18,6 +18,7 @@ const Signup = () => {
         }}
       >
         <div className="content__mainSection landing__container">
+          <h3>Coming soon...</h3>
           <SignUpModal />
         </div>
       </section>

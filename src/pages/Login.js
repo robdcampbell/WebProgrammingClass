@@ -17,6 +17,7 @@ const Login = () => {
         }}
       >
         <div className="content__mainSection landing__container">
+          <h3>Coming soon...</h3>
           <LoginModal />
         </div>
       </section>

@@ -23,8 +23,8 @@ const PublicHomePage = () => {
       <div className="content__mainSection ">
         <div className="public__home__body">
           <div className="home__heading">
-            <h1> Welcome to HomeRoom,</h1>
-            <h2>let's de-mystify some things.</h2>
+            {/* <h1> Welcome to HomeRoom,</h1> */}
+            <h2>Welcome to HomeRoom. Let's de-mystify some things.</h2>
 
             <div className="landing__subtitle">
               <p>
