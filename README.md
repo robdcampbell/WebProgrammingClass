@@ -7,3 +7,8 @@
 ## Built using:
 
 - React.js (Context API, D3)
+
+### When hosting any element of the app on Netlify:
+
+- The "build" script in the root package.json file must be edited to conform to Netlify. The command has the be as follows:
+  `"build": "CI= react-scripts build"`
