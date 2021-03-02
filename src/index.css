@@ -29,6 +29,7 @@ CSS Variables
 :root {
   /* Background Theme*/
   --rc-background-light: hsl(0, 0%, 98%);
+  --rc-blue: hsl(210, 100%, 56%);
 
   /* dark shades of primary color*/
   --clr-primary-1: hsl(205, 86%, 17%);
@@ -111,7 +112,6 @@ h1,
 h2,
 h3,
 h4 {
-  /* letter-spacing: var(--spacing); */
   color: var(--clr-primary-1);
   line-height: 1.25;
   margin-bottom: 0.75rem;
@@ -191,7 +191,7 @@ button {
 .confirm__btn__outline {
   padding: 0.75rem 1.25rem;
   color: var(--clr-grey-1);
-  border: var(--clr-red-orange) solid 1.5px;
+  border: var(--rc-blue) solid 1.5px;
   border-radius: 2rem;
   transition: 200ms ease-in;
 }
@@ -207,7 +207,8 @@ NavBar (Component)
 */
 
 nav {
-  background: rgb(250, 250, 250);
+  /* background: rgb(250, 250, 250); */
+  background: linear-gradient(90deg, var(--rc-blue), #8826f7);
   position: fixed;
   width: 100%;
   border-bottom: var(--clr-grey-9) solid 1px;
@@ -228,7 +229,7 @@ nav {
 }
 
 .nav__logo {
-  color: var(--clr-grey-1);
+  color: var(--clr-white);
   font-weight: 200;
   font-size: 1.5rem;
   letter-spacing: -0.1rem;
@@ -239,6 +240,7 @@ nav {
 
 .nav__links > * {
   margin-left: 2rem;
+  color: var(--clr-white);
 }
 .mobile__nav {
   display: none;
@@ -348,7 +350,7 @@ Landing Page Content
 }
 
 .span__title {
-  color: var(--clr-red-orange) !important;
+  color: var(--rc-blue) !important;
 }
 
 .landing__links {
@@ -400,6 +402,7 @@ Landing Page Content
 }
 .landing__mobile__icon {
   display: none;
+  background: none;
   color: var(--clr-grey-1);
   padding-bottom: 0.5rem;
   border: none;
@@ -597,7 +600,7 @@ Compound Calc. (PublicHomePage)
 }
 
 .calc__input__section > input:focus {
-  border: var(--clr-red-orange) solid 1px;
+  border: var(--rc-blue) solid 1px;
 }
 
 .calc__buttons {
