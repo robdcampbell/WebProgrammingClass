@@ -18,17 +18,14 @@ const Class1 = () => {
           setShowSideBarNav(false);
         }}
       >
-        <div className="content__mainSection ">
-          <div className="public__home__body">
-            <div className="#">
-              {/* <h1> Welcome to HomeRoom,</h1> */}
-              <h2>Class 1</h2>
-              <Link to="/home-public" className="">
-                <p>Back to all classes</p>
-              </Link>
-
-              {/* <div className="landing__subtitle"> */}
-            </div>
+        <div className="class__content">
+          <div className="class__heading">
+            {/* <h1> Welcome to HomeRoom,</h1> */}
+            <h2>Class 1</h2>
+            <Link to="/home-public" className="">
+              <p className="return__link">Back to all classes</p>
+            </Link>
+            {/* <div className="landing__subtitle"> */}
           </div>
         </div>
       </section>

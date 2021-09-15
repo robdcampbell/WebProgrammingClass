@@ -499,6 +499,7 @@ Main Content - Body wireframe
 }
 
 .content__mainSection {
+  width: 100%;
   max-width: 1200px;
   display: flex;
   flex-direction: column;
@@ -540,6 +541,8 @@ Classes (class content page)
   gap: 3rem;
   /* grid-template-columns: 1fr 1fr; */
   align-items: flex-start;
+
+  width: 100%;
 }
 
 .home__heading {
@@ -550,6 +553,23 @@ Classes (class content page)
   letter-spacing: -0.125rem;
   /* border-bottom: var(--clr-grey-2) solid 1px; */
   padding-bottom: 1rem;
+}
+.class__content {
+  width: 90%;
+  margin-top: 8rem;
+  /* margin-left: 4rem; */
+}
+.class__heading {
+  width: 100%;
+  /* background-color: red; */
+}
+.class__heading > h2 {
+  margin: 0;
+  margin-right: 2rem;
+  padding: 0;
+}
+.return__link {
+  color: #636363;
 }
 
 .classList {
