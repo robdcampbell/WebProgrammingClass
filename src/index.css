@@ -10,7 +10,7 @@ StyleSheet Table of Contents
 - SideBar Nav (Component)
 - Main Content
 - Landing Page Content
-- Public Home Page Content
+- Classes
 - Compound Calc. (PublicHomePage)
 - Account Modals - temp.
 - About Page
@@ -207,8 +207,8 @@ NavBar (Component)
 */
 
 nav {
-  /* background: rgb(250, 250, 250); */
-  background: linear-gradient(90deg, var(--rc-blue), #8826f7);
+  background: #4b4b4b;
+  /* background: linear-gradient(90deg, var(--rc-blue), #8826f7); */
   position: fixed;
   width: 100%;
   border-bottom: var(--clr-grey-9) solid 1px;
@@ -379,11 +379,17 @@ Landing Page Content
   border: var(--clr-grey-7) solid 1px;
   border-radius: 5rem;
   transition: 200ms ease-in;
-  background: linear-gradient(90deg, var(--rc-blue), #8826f7);
-  color: var(--clr-white);
+  /* background: linear-gradient(90deg, var(--rc-blue), #9f99a7); */
+  background-color: #e2e2e2;
+  color: var(--clr-grey-1);
+}
+.createAccount__btn > p {
+  font-size: 2rem;
+  font-weight: 200;
 }
 .createAccount__btn:hover {
-  background: linear-gradient(90deg, var(--rc-blue), #9767ce);
+  /* background: linear-gradient(90deg, var(--rc-blue), #9767ce); */
+  background-color: #cecece;
   color: var(--clr-grey-1);
 }
 
@@ -525,14 +531,14 @@ Main Content - Body wireframe
 
 /* 
 ============================== 
-Public Home Page Content
+Classes (class content page)
 ==============================
 */
 
 .public__home__body {
   display: grid;
   gap: 3rem;
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
   align-items: flex-start;
 }
 
@@ -542,8 +548,26 @@ Public Home Page Content
 }
 .home__heading > h2 {
   letter-spacing: -0.125rem;
-  border-bottom: var(--clr-grey-2) solid 1px;
+  /* border-bottom: var(--clr-grey-2) solid 1px; */
   padding-bottom: 1rem;
+}
+
+.classList {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  width: 100%;
+  /* background-color: red; */
+}
+.classBtn {
+  width: 100%;
+  margin: 0.25rem;
+  padding: 1rem;
+  border: #4b4b4b solid 1px;
+  border-radius: 0.5rem;
+}
+.classBtn:hover {
+  background-color: #c1c1c1;
 }
 
 @media screen and (max-width: 1050px) {
@@ -555,82 +579,6 @@ Public Home Page Content
   .home__heading {
     padding-top: -5rem;
   }
-}
-
-/* 
-============================== 
-Compound Calc. (PublicHomePage)
-==============================
-*/
-
-.calc__intro {
-  max-width: 400px;
-  margin-top: 2rem;
-}
-
-.compound__interest__calc {
-  margin-top: 1rem;
-  border: var(--clr-grey-2) solid 1px;
-  border-radius: 0.5rem;
-  padding: 2rem;
-  max-width: 600px;
-  margin-bottom: 0.5rem;
-}
-.compound__interest__calc > h3 {
-  font-size: 1.5rem;
-  letter-spacing: -0.1rem;
-  padding-bottom: 1rem;
-}
-.compound__interest__calc > div > label {
-  font-weight: 600;
-  letter-spacing: -0.05rem;
-}
-
-.calc__input__section {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2rem;
-}
-.calc__input__section > input {
-  outline: none;
-  border: none;
-  padding: 0.5rem 0;
-  background: var(--clr-white);
-  border-bottom: var(--clr-grey-4) solid 1px;
-}
-.compound__frequencey > select {
-  padding: 0.25rem;
-  border: var(--clr-green-light) solid 1px;
-}
-
-.calc__input__section > input:focus {
-  border: var(--rc-blue) solid 1px;
-}
-
-.calc__buttons {
-  display: flex;
-  justify-content: flex-end;
-}
-.calc__buttons > button {
-  color: var(--clr-grey-6);
-  display: flex;
-  justify-content: flex-end;
-}
-
-.calc__buttons > button:nth-child(1):hover {
-  background: var(--clr-white);
-  color: var(--clr-grey-1);
-}
-
-.calc__results {
-  padding: 2rem;
-  border: var(--clr-grey-2) solid 1px;
-  border-radius: 0.5rem;
-}
-
-.calc__results > h3 {
-  padding-bottom: 0.5rem;
-  border-bottom: var(--clr-grey-2) solid 1px;
 }
 
 /* 
