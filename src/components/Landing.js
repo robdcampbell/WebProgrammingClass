@@ -39,7 +39,7 @@ const Landing = () => {
               >
                 <Link to="/home-public">Classes</Link>
 
-                <Link to="/login">Resources</Link>
+                <Link to="/resources">Resources</Link>
 
                 <Link to="/syllabus">Syllabus</Link>
 
@@ -67,7 +67,7 @@ const Landing = () => {
                 <FaArrowRight className="arrow__icon" />
               </Link>
               <div className="account__buttons">
-                <Link to="/login" className="landing__links">
+                <Link to="/resources" className="landing__links">
                   Resources
                 </Link>
                 <Link to="/syllabus" className="landing__links">

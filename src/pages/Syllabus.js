@@ -19,7 +19,12 @@ const Signup = () => {
       >
         <div className="content__mainSection landing__container">
           <h3>Coming soon...</h3>
-          <SignUpModal />
+          <a
+            href="https://sva.simplesyllabus.com/doc/fxwmrurf3/Fall-2021-UG%2FGR-HSG-5343-A-WEB-PROGRAMG-I?mode=view"
+            target="__blank"
+          >
+            (Click here for PDF of class syllabus)
+          </a>
         </div>
       </section>
       <Footer />

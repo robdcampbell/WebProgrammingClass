@@ -781,6 +781,22 @@ Footer
 
 /* 
 =======================================  
+Error page
+======================================= 
+*/
+
+.error__page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+.error__page > * {
+  margin: 0 auto;
+}
+
+/* 
+=======================================  
 Loading Animation Classes (COMING SOON)
 ======================================= 
 */

@@ -21,11 +21,11 @@ const Nav = () => {
             <Link to="/syllabus" className="confirm__btn__outline">
               Syllabus
             </Link>
-            <Link to="/login" className="confirm__btn__outline">
+            <Link to="/resources" className="confirm__btn__outline">
               Resources
             </Link>
 
-            <Link to="/about">Contact</Link>
+            {/* <Link to="/about">Contact</Link> */}
           </div>
           <button className="mobile__nav">
             <FaBars onClick={(e) => setShowSideBarNav(!showSideBarNav)} />
