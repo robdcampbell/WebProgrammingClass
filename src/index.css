@@ -380,8 +380,8 @@ Landing Page Content
   border-radius: 5rem;
   transition: 200ms ease-in;
   /* background: linear-gradient(90deg, var(--rc-blue), #9f99a7); */
-  background-color: #e2e2e2;
-  color: var(--clr-grey-1);
+  background-color: var(--rc-blue);
+  color: var(--clr-grey-10);
 }
 .createAccount__btn > p {
   font-size: 2rem;
@@ -581,13 +581,17 @@ Classes (class content page)
 }
 .classBtn {
   width: 100%;
-  margin: 0.25rem;
+  margin: 0.5rem;
   padding: 1rem;
-  border: #4b4b4b solid 1px;
+  /* border: #4b4b4b solid 1px; */
   border-radius: 0.5rem;
+  box-shadow: 2px 2px 7px #d3d3d3;
+  transition: 200ms ease-in;
 }
 .classBtn:hover {
-  background-color: #c1c1c1;
+  background-color: #e4e4e4;
+  box-shadow: 2px 2px 7px #c2c2c2;
+  scale: 1.1;
 }
 
 @media screen and (max-width: 1050px) {

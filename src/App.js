@@ -7,8 +7,6 @@ import Class2 from "./pages/Class2";
 
 import Error from "./pages/Error";
 import About from "./pages/About";
-import Nav from "./components/Nav";
-import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Syllabus from "./pages/Syllabus";
 import { NavProvider } from "./context/NavContext";

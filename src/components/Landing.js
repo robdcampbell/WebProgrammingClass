@@ -60,8 +60,7 @@ const Landing = () => {
             {/* <h2>Let's take those first steps.</h2> */}
             <div className="landing__subtitle">
               <p>
-                Welcome to <span className="span__title">Web Programming</span>,
-                let's jump in.
+                <span className="span__title">Welcome</span>, let's jump in.
               </p>
               <Link to="/home-public" className="createAccount__btn">
                 <p>Classes</p>

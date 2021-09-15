@@ -28,49 +28,54 @@ const PublicHomePage = () => {
                 <span className="emphasis__spanP">Ready to get started? :</span>
               </p> */}
               <Link to="/class1" className="classBtn">
-                <p>Class 1</p>
+                <h3>Class 1</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+                  commodi facere odio natus non deserunt dolorum reiciendis
+                  corrupti in velit!
+                </p>
               </Link>
               <Link to="/class2" className="classBtn">
-                <p>Class 2</p>
+                <h3>Class 2</h3>
               </Link>
               <Link to="/#" className="classBtn">
-                <p>Class 3</p>
+                <h3>Class 3</h3>
               </Link>
               <Link to="/#" className="classBtn">
-                <p>Class 4</p>
+                <h3>Class 4</h3>
               </Link>
               <Link to="/#" className="classBtn">
-                <p>Class 5</p>
+                <h3>Class 5</h3>
               </Link>
               <Link to="/#" className="classBtn">
-                <p>Class 6</p>
+                <h3>Class 6</h3>
               </Link>
               <Link to="/#" className="classBtn">
-                <p>Class 7</p>
+                <h3>Class 7</h3>
               </Link>
               <Link to="/#" className="classBtn">
-                <p>Class 8</p>
+                <h3>Class 8</h3>
               </Link>
               <Link to="/#" className="classBtn">
-                <p>Class 9</p>
+                <h3>Class 9</h3>
               </Link>
               <Link to="/#" className="classBtn">
-                <p>Class 10</p>
+                <h3>Class 10</h3>
               </Link>
               <Link to="/#" className="classBtn">
-                <p>Class 11</p>
+                <h3>Class 11</h3>
               </Link>
               <Link to="/#" className="classBtn">
-                <p>Class 12</p>
+                <h3>Class 12</h3>
               </Link>
               <Link to="/#" className="classBtn">
-                <p>Class 13</p>
+                <h3>Class 13</h3>
               </Link>
               <Link to="/#" className="classBtn">
-                <p>Class 14</p>
+                <h3>Class 14</h3>
               </Link>
               <Link to="/#" className="classBtn">
-                <p>Class 15</p>
+                <h3>Class 15</h3>
               </Link>
             </div>
           </div>
