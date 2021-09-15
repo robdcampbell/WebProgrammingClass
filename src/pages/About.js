@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import { useSidebarHidden } from "../context/NavContext";
 
-const About = () => {
+const Contact = () => {
   const { showSideBarNav, setShowSideBarNav } = useSidebarHidden();
   return (
     <>
@@ -16,7 +16,7 @@ const About = () => {
         }}
       >
         <div className="content__mainSection  about__modal">
-          <h2>About HomeRoom.</h2>
+          <h2>About Web Programming.</h2>
           <p>
             HomeRoom is a resource for starting or adjusting preparations for
             your financial future.
@@ -27,6 +27,8 @@ const About = () => {
             retirement goals, find simple-to-use and easy-to-understand
             resources to equip them with knowledge.
           </p>
+          <h2>Contact:</h2>
+          rcampbell1@sva.edu
         </div>
       </section>
       <Footer />
@@ -34,4 +36,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Contact;

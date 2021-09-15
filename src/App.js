@@ -8,7 +8,7 @@ import About from "./pages/About";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+import Syllabus from "./pages/Syllabus";
 import { NavProvider } from "./context/NavContext";
 import { CalcProvider } from "./context/CalcContext";
 
@@ -22,7 +22,7 @@ function App() {
             <Route exact path="/home-public" component={PublicHomePage} />
             <Route exact path="/about" component={About} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/syllabus" component={Syllabus} />
             <Route path="*" component={Error} />
           </Switch>
         </CalcProvider>

@@ -1,16 +1,16 @@
 import React from "react";
 import Footer from "../components/Footer";
-import PublicHomeContent from "../components/PublicHomeContent";
+import ClassContent from "../components/ClassContent";
 import Nav from "../components/Nav";
 
-const PublicHomePage = () => {
+const Classes = () => {
   return (
     <main>
       <Nav />
-      <PublicHomeContent />
+      <ClassContent />
       <Footer />
     </main>
   );
 };
 
-export default PublicHomePage;
+export default Classes;

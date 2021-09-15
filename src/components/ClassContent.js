@@ -6,12 +6,8 @@ import CompoundCalc from "./CompoundCalc";
 
 const PublicHomePage = () => {
   const { showSideBarNav, setShowSideBarNav } = useSidebarHidden();
-  const {
-    showResults,
-    setShowResults,
-    calcResults,
-    setCalcResults,
-  } = useCompoundCalculator();
+  const { showResults, setShowResults, calcResults, setCalcResults } =
+    useCompoundCalculator();
 
   return (
     <section
@@ -24,19 +20,9 @@ const PublicHomePage = () => {
         <div className="public__home__body">
           <div className="home__heading">
             {/* <h1> Welcome to HomeRoom,</h1> */}
-            <h2>Welcome to HomeRoom. Let's de-mystify some things.</h2>
+            <h2>Fall 2021</h2>
 
             <div className="landing__subtitle">
-              <p>
-                Terms like <span className="emphasis__spanP">"401k"</span>,
-                <span className="emphasis__spanP">"IRA"</span>, and other
-                acronyms we hear tossed around can all be a bit daunting at
-                first.
-              </p>
-              <p>
-                But these can all be simplified to get closer to building a
-                fruitful future - it's never too late (or too early).
-              </p>
               <p style={{ marginBottom: "0" }}>
                 <span className="emphasis__spanP">Ready to get started? :</span>
               </p>
@@ -50,7 +36,7 @@ const PublicHomePage = () => {
               Visualize the "magic" behind it here:
             </p>
           </div>
-          <div>
+          {/* <div>
             <CompoundCalc />
             {showResults && (
               <div className="calc__results">
@@ -60,7 +46,7 @@ const PublicHomePage = () => {
                 <p>{`Amount after ${calcResults.lengthInYears} years: $ ${calcResults.finalAmount}`}</p>
               </div>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

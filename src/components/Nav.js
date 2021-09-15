@@ -13,19 +13,19 @@ const Nav = () => {
       <div className="nav__wrapper">
         <div className="nav__container">
           <Link to="/" onClick={(e) => setShowSideBarNav(false)}>
-            <h2 className="nav__logo">HomeRoom</h2>
+            <h2 className="nav__logo">Web Programming</h2>
           </Link>
 
           <div className="nav__links">
-            <Link to="/home-public">Get Started</Link>
-            <Link to="/signup" className="confirm__btn__outline">
-              Sign Up
+            <Link to="/home-public">Classes</Link>
+            <Link to="/syllabus" className="confirm__btn__outline">
+              Syllabus
             </Link>
             <Link to="/login" className="confirm__btn__outline">
-              Login
+              Resources
             </Link>
 
-            <Link to="/about">About</Link>
+            <Link to="/about">Contact</Link>
           </div>
           <button className="mobile__nav">
             <FaBars onClick={(e) => setShowSideBarNav(!showSideBarNav)} />

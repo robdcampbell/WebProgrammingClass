@@ -332,11 +332,12 @@ Landing Page Content
 }
 .landing__container {
   border-radius: 0.5rem;
+  margin: 1rem;
 }
 .landing__container > h1 {
-  margin-left: -0.3rem;
+  /* margin-left: -0.3rem; */
   padding: 0;
-  font-size: 8rem;
+  font-size: 7rem;
   font-weight: 200;
   letter-spacing: -0.35rem;
 }
@@ -446,6 +447,10 @@ Landing Page Content
 }
 
 @media screen and (max-width: 800px) {
+  .landing__container {
+    padding: 1rem;
+    max-width: 600px;
+  }
   .landing__nav__links {
     display: none;
   }

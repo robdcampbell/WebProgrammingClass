@@ -12,13 +12,13 @@ const SideBarNav = () => {
         setShowSideBarNav(false);
       }}
     >
-      <Link to="/home-public">Get Started</Link>
+      <Link to="/home-public">Classes</Link>
 
-      <Link to="/login">Login</Link>
+      <Link to="/login">Resources</Link>
 
-      <Link to="/signup">Sign Up</Link>
+      <Link to="/syllabus">Syllabus</Link>
 
-      <Link to="/about">About</Link>
+      <Link to="/about">Contact</Link>
     </div>
   );
 };

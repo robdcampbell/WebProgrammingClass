@@ -21,9 +21,9 @@ const Landing = () => {
       <div className="landing__fixedWidth">
         <div className="landing__nav__container">
           <div className="landing__nav__links">
-            <Link to="/home-public">Get Started</Link>
+            {/* <Link to="/home-public">Classes</Link> */}
 
-            <Link to="/about">About</Link>
+            {/* <Link to="/about">About</Link> */}
           </div>
 
           <div className="landing__mobile__nav">
@@ -37,13 +37,13 @@ const Landing = () => {
                   setShowSideBarNav(false);
                 }}
               >
-                <Link to="/home-public">Get Started</Link>
+                <Link to="/home-public">Classes</Link>
 
-                <Link to="/login">Login</Link>
+                <Link to="/login">Resources</Link>
 
-                <Link to="/signup">Sign Up</Link>
+                <Link to="/syllabus">Syllabus</Link>
 
-                <Link to="/about">About</Link>
+                <Link to="/about">Contact</Link>
               </div>
             )}
           </div>
@@ -56,24 +56,23 @@ const Landing = () => {
           }}
         >
           <div className=" landing__container">
-            <h1>HomeRoom</h1>
-            <h2>Let's take those first steps.</h2>
+            <h1>Web Programming</h1>
+            {/* <h2>Let's take those first steps.</h2> */}
             <div className="landing__subtitle">
               <p>
-                <span className="span__title"> HomeRoom</span>, a tool to make
-                preparing for your financial future dead simple and easy to
-                visualize (without being dull and full of lingo).
+                Welcome to <span className="span__title">Web Programming</span>,
+                let's jump in.
               </p>
               <Link to="/home-public" className="createAccount__btn">
-                <p>Start building that nest-egg</p>
+                <p>Classes</p>
                 <FaArrowRight className="arrow__icon" />
               </Link>
               <div className="account__buttons">
                 <Link to="/login" className="landing__links">
-                  Login
+                  Resources
                 </Link>
-                <Link to="/signup" className="landing__links">
-                  Signup
+                <Link to="/syllabus" className="landing__links">
+                  Syllabus
                 </Link>
               </div>
             </div>
